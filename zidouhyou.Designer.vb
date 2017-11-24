@@ -26,7 +26,6 @@ Partial Class zidouhyou
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -62,25 +61,7 @@ Partial Class zidouhyou
         Me.FuriganaTB = New System.Windows.Forms.TextBox()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.OtherTextBox = New System.Windows.Forms.TextBox()
-        Me.DetailsTextBox = New System.Windows.Forms.TextBox()
-        Me.VulnerableSickTextBox = New System.Windows.Forms.TextBox()
-        Me.SurgeryTextBox = New System.Windows.Forms.TextBox()
-        Me.SickCheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.SickCheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.AllergiesRadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.AllergiesRadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TesuuenTimebox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -111,7 +92,6 @@ Partial Class zidouhyou
         Me.RichTextBox15 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox14 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox13 = New System.Windows.Forms.RichTextBox()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.RichTextBox12 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox11 = New System.Windows.Forms.RichTextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -138,6 +118,26 @@ Partial Class zidouhyou
         Me.Relationship3TB = New System.Windows.Forms.TextBox()
         Me.Relationship2TB = New System.Windows.Forms.TextBox()
         Me.Relationship1TB = New System.Windows.Forms.TextBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.OtherTextBox = New System.Windows.Forms.TextBox()
+        Me.DetailsTextBox = New System.Windows.Forms.TextBox()
+        Me.VulnerableSickTextBox = New System.Windows.Forms.TextBox()
+        Me.SurgeryTextBox = New System.Windows.Forms.TextBox()
+        Me.SickCheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.SickCheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.AllergiesRadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.AllergiesRadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -145,16 +145,16 @@ Partial Class zidouhyou
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(585, 103)
+        Me.Label1.Location = New System.Drawing.Point(201, 103)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 16)
         Me.Label1.TabIndex = 4
@@ -173,18 +173,11 @@ Partial Class zidouhyou
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label6.Location = New System.Drawing.Point(33, 103)
+        Me.Label6.Location = New System.Drawing.Point(12, 103)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 16)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "作成者"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(103, 100)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(184, 19)
-        Me.TextBox4.TabIndex = 13
         '
         'Label7
         '
@@ -209,7 +202,7 @@ Partial Class zidouhyou
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(655, 103)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(263, 102)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(184, 19)
         Me.DateTimePicker1.TabIndex = 16
@@ -258,7 +251,7 @@ Partial Class zidouhyou
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(23, 139)
+        Me.TabControl1.Location = New System.Drawing.Point(9, 139)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(830, 599)
@@ -272,7 +265,7 @@ Partial Class zidouhyou
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(822, 573)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "お子様"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Panel2
@@ -300,7 +293,7 @@ Partial Class zidouhyou
         Me.Panel2.Controls.Add(Me.MailaddressTB)
         Me.Panel2.Controls.Add(Me.FuriganaTB)
         Me.Panel2.Controls.Add(Me.DateTimePicker2)
-        Me.Panel2.Location = New System.Drawing.Point(16, 79)
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(806, 424)
         Me.Panel2.TabIndex = 1
@@ -515,194 +508,72 @@ Partial Class zidouhyou
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(822, 573)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.Text = "家族構成"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TabPage3
+        'Panel3
         '
-        Me.TabPage3.Controls.Add(Me.Panel4)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(822, 573)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "TabPage3"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'Panel4
-        '
-        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
-        Me.Panel4.Controls.Add(Me.RichTextBox1)
-        Me.Panel4.Controls.Add(Me.CheckBox1)
-        Me.Panel4.Controls.Add(Me.OtherTextBox)
-        Me.Panel4.Controls.Add(Me.DetailsTextBox)
-        Me.Panel4.Controls.Add(Me.VulnerableSickTextBox)
-        Me.Panel4.Controls.Add(Me.SurgeryTextBox)
-        Me.Panel4.Controls.Add(Me.SickCheckBox9)
-        Me.Panel4.Controls.Add(Me.SickCheckBox8)
-        Me.Panel4.Controls.Add(Me.SickCheckBox7)
-        Me.Panel4.Controls.Add(Me.SickCheckBox6)
-        Me.Panel4.Controls.Add(Me.SickCheckBox5)
-        Me.Panel4.Controls.Add(Me.SickCheckBox4)
-        Me.Panel4.Controls.Add(Me.SickCheckBox3)
-        Me.Panel4.Controls.Add(Me.SickCheckBox2)
-        Me.Panel4.Controls.Add(Me.SickCheckBox1)
-        Me.Panel4.Controls.Add(Me.AllergiesRadioButton2)
-        Me.Panel4.Controls.Add(Me.AllergiesRadioButton1)
-        Me.Panel4.Location = New System.Drawing.Point(9, 35)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(706, 383)
-        Me.Panel4.TabIndex = 1
-        '
-        'OtherTextBox
-        '
-        Me.OtherTextBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.OtherTextBox.Location = New System.Drawing.Point(592, 83)
-        Me.OtherTextBox.Name = "OtherTextBox"
-        Me.OtherTextBox.Size = New System.Drawing.Size(92, 21)
-        Me.OtherTextBox.TabIndex = 18
-        '
-        'DetailsTextBox
-        '
-        Me.DetailsTextBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DetailsTextBox.Location = New System.Drawing.Point(505, 41)
-        Me.DetailsTextBox.Name = "DetailsTextBox"
-        Me.DetailsTextBox.Size = New System.Drawing.Size(179, 21)
-        Me.DetailsTextBox.TabIndex = 17
-        '
-        'VulnerableSickTextBox
-        '
-        Me.VulnerableSickTextBox.Font = New System.Drawing.Font("MS UI Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.VulnerableSickTextBox.Location = New System.Drawing.Point(260, 244)
-        Me.VulnerableSickTextBox.Name = "VulnerableSickTextBox"
-        Me.VulnerableSickTextBox.Size = New System.Drawing.Size(424, 39)
-        Me.VulnerableSickTextBox.TabIndex = 15
-        '
-        'SurgeryTextBox
-        '
-        Me.SurgeryTextBox.Font = New System.Drawing.Font("MS UI Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.SurgeryTextBox.Location = New System.Drawing.Point(140, 130)
-        Me.SurgeryTextBox.Name = "SurgeryTextBox"
-        Me.SurgeryTextBox.Size = New System.Drawing.Size(544, 39)
-        Me.SurgeryTextBox.TabIndex = 14
-        '
-        'SickCheckBox9
-        '
-        Me.SickCheckBox9.AutoSize = True
-        Me.SickCheckBox9.Location = New System.Drawing.Point(325, 214)
-        Me.SickCheckBox9.Name = "SickCheckBox9"
-        Me.SickCheckBox9.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox9.TabIndex = 11
-        Me.SickCheckBox9.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox8
-        '
-        Me.SickCheckBox8.AutoSize = True
-        Me.SickCheckBox8.Location = New System.Drawing.Point(217, 214)
-        Me.SickCheckBox8.Name = "SickCheckBox8"
-        Me.SickCheckBox8.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox8.TabIndex = 10
-        Me.SickCheckBox8.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox7
-        '
-        Me.SickCheckBox7.AutoSize = True
-        Me.SickCheckBox7.Location = New System.Drawing.Point(381, 184)
-        Me.SickCheckBox7.Name = "SickCheckBox7"
-        Me.SickCheckBox7.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox7.TabIndex = 9
-        Me.SickCheckBox7.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox6
-        '
-        Me.SickCheckBox6.AutoSize = True
-        Me.SickCheckBox6.Location = New System.Drawing.Point(315, 184)
-        Me.SickCheckBox6.Name = "SickCheckBox6"
-        Me.SickCheckBox6.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox6.TabIndex = 8
-        Me.SickCheckBox6.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox5
-        '
-        Me.SickCheckBox5.AutoSize = True
-        Me.SickCheckBox5.Location = New System.Drawing.Point(248, 184)
-        Me.SickCheckBox5.Name = "SickCheckBox5"
-        Me.SickCheckBox5.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox5.TabIndex = 7
-        Me.SickCheckBox5.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox4
-        '
-        Me.SickCheckBox4.AutoSize = True
-        Me.SickCheckBox4.Location = New System.Drawing.Point(450, 87)
-        Me.SickCheckBox4.Name = "SickCheckBox4"
-        Me.SickCheckBox4.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox4.TabIndex = 6
-        Me.SickCheckBox4.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox3
-        '
-        Me.SickCheckBox3.AutoSize = True
-        Me.SickCheckBox3.Location = New System.Drawing.Point(343, 87)
-        Me.SickCheckBox3.Name = "SickCheckBox3"
-        Me.SickCheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox3.TabIndex = 5
-        Me.SickCheckBox3.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox2
-        '
-        Me.SickCheckBox2.AutoSize = True
-        Me.SickCheckBox2.Location = New System.Drawing.Point(248, 87)
-        Me.SickCheckBox2.Name = "SickCheckBox2"
-        Me.SickCheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox2.TabIndex = 4
-        Me.SickCheckBox2.UseVisualStyleBackColor = True
-        '
-        'SickCheckBox1
-        '
-        Me.SickCheckBox1.AutoSize = True
-        Me.SickCheckBox1.Location = New System.Drawing.Point(178, 87)
-        Me.SickCheckBox1.Name = "SickCheckBox1"
-        Me.SickCheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.SickCheckBox1.TabIndex = 3
-        Me.SickCheckBox1.UseVisualStyleBackColor = True
-        '
-        'AllergiesRadioButton2
-        '
-        Me.AllergiesRadioButton2.AutoSize = True
-        Me.AllergiesRadioButton2.Location = New System.Drawing.Point(304, 45)
-        Me.AllergiesRadioButton2.Name = "AllergiesRadioButton2"
-        Me.AllergiesRadioButton2.Size = New System.Drawing.Size(14, 13)
-        Me.AllergiesRadioButton2.TabIndex = 2
-        Me.AllergiesRadioButton2.TabStop = True
-        Me.AllergiesRadioButton2.UseVisualStyleBackColor = True
-        '
-        'AllergiesRadioButton1
-        '
-        Me.AllergiesRadioButton1.AutoSize = True
-        Me.AllergiesRadioButton1.Location = New System.Drawing.Point(248, 45)
-        Me.AllergiesRadioButton1.Name = "AllergiesRadioButton1"
-        Me.AllergiesRadioButton1.Size = New System.Drawing.Size(14, 13)
-        Me.AllergiesRadioButton1.TabIndex = 1
-        Me.AllergiesRadioButton1.TabStop = True
-        Me.AllergiesRadioButton1.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(527, 87)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 19
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(10, 319)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(674, 50)
-        Me.RichTextBox1.TabIndex = 20
-        Me.RichTextBox1.Text = ""
+        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.TesuuenTimebox2)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.TsuuenTimeTextBox1)
+        Me.Panel3.Controls.Add(Me.RichTextBox2)
+        Me.Panel3.Controls.Add(Me.TextBox27)
+        Me.Panel3.Controls.Add(Me.TextBox26)
+        Me.Panel3.Controls.Add(Me.TextBox25)
+        Me.Panel3.Controls.Add(Me.TextBox24)
+        Me.Panel3.Controls.Add(Me.TextBox23)
+        Me.Panel3.Controls.Add(Me.TextBox22)
+        Me.Panel3.Controls.Add(Me.TextBox21)
+        Me.Panel3.Controls.Add(Me.TextBox20)
+        Me.Panel3.Controls.Add(Me.TextBox19)
+        Me.Panel3.Controls.Add(Me.TextBox18)
+        Me.Panel3.Controls.Add(Me.TextBox16)
+        Me.Panel3.Controls.Add(Me.TextBox17)
+        Me.Panel3.Controls.Add(Me.TextBox15)
+        Me.Panel3.Controls.Add(Me.TextBox14)
+        Me.Panel3.Controls.Add(Me.NameTB2)
+        Me.Panel3.Controls.Add(Me.TextBox12)
+        Me.Panel3.Controls.Add(Me.TextBox11)
+        Me.Panel3.Controls.Add(Me.TextBox10)
+        Me.Panel3.Controls.Add(Me.TextBox7)
+        Me.Panel3.Controls.Add(Me.RichTextBox18)
+        Me.Panel3.Controls.Add(Me.RichTextBox17)
+        Me.Panel3.Controls.Add(Me.RichTextBox16)
+        Me.Panel3.Controls.Add(Me.RichTextBox15)
+        Me.Panel3.Controls.Add(Me.RichTextBox14)
+        Me.Panel3.Controls.Add(Me.RichTextBox13)
+        Me.Panel3.Controls.Add(Me.RichTextBox12)
+        Me.Panel3.Controls.Add(Me.RichTextBox11)
+        Me.Panel3.Controls.Add(Me.TextBox9)
+        Me.Panel3.Controls.Add(Me.TextBox8)
+        Me.Panel3.Controls.Add(Me.TextBox6)
+        Me.Panel3.Controls.Add(Me.TextBox5)
+        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.TextBox28)
+        Me.Panel3.Controls.Add(Me.RichTextBox3)
+        Me.Panel3.Controls.Add(Me.TEL5TB)
+        Me.Panel3.Controls.Add(Me.TEL4TB)
+        Me.Panel3.Controls.Add(Me.TEL3TB)
+        Me.Panel3.Controls.Add(Me.TextBox29)
+        Me.Panel3.Controls.Add(Me.TextBox30)
+        Me.Panel3.Controls.Add(Me.Old5TB)
+        Me.Panel3.Controls.Add(Me.Old4TB)
+        Me.Panel3.Controls.Add(Me.Old3TB)
+        Me.Panel3.Controls.Add(Me.TextBox31)
+        Me.Panel3.Controls.Add(Me.Old1TB)
+        Me.Panel3.Controls.Add(Me.Relationship5TB)
+        Me.Panel3.Controls.Add(Me.Relationship4TB)
+        Me.Panel3.Controls.Add(Me.Relationship3TB)
+        Me.Panel3.Controls.Add(Me.Relationship2TB)
+        Me.Panel3.Controls.Add(Me.Relationship1TB)
+        Me.Panel3.Location = New System.Drawing.Point(6, 6)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(695, 708)
+        Me.Panel3.TabIndex = 1
         '
         'Label8
         '
@@ -948,70 +819,6 @@ Partial Class zidouhyou
         Me.RichTextBox13.TabIndex = 46
         Me.RichTextBox13.Text = ""
         '
-        'Panel3
-        '
-        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
-        Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.TesuuenTimebox2)
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.TsuuenTimeTextBox1)
-        Me.Panel3.Controls.Add(Me.RichTextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox27)
-        Me.Panel3.Controls.Add(Me.TextBox26)
-        Me.Panel3.Controls.Add(Me.TextBox25)
-        Me.Panel3.Controls.Add(Me.TextBox24)
-        Me.Panel3.Controls.Add(Me.TextBox23)
-        Me.Panel3.Controls.Add(Me.TextBox22)
-        Me.Panel3.Controls.Add(Me.TextBox21)
-        Me.Panel3.Controls.Add(Me.TextBox20)
-        Me.Panel3.Controls.Add(Me.TextBox19)
-        Me.Panel3.Controls.Add(Me.TextBox18)
-        Me.Panel3.Controls.Add(Me.TextBox16)
-        Me.Panel3.Controls.Add(Me.TextBox17)
-        Me.Panel3.Controls.Add(Me.TextBox15)
-        Me.Panel3.Controls.Add(Me.TextBox14)
-        Me.Panel3.Controls.Add(Me.NameTB2)
-        Me.Panel3.Controls.Add(Me.TextBox12)
-        Me.Panel3.Controls.Add(Me.TextBox11)
-        Me.Panel3.Controls.Add(Me.TextBox10)
-        Me.Panel3.Controls.Add(Me.TextBox7)
-        Me.Panel3.Controls.Add(Me.RichTextBox18)
-        Me.Panel3.Controls.Add(Me.RichTextBox17)
-        Me.Panel3.Controls.Add(Me.RichTextBox16)
-        Me.Panel3.Controls.Add(Me.RichTextBox15)
-        Me.Panel3.Controls.Add(Me.RichTextBox14)
-        Me.Panel3.Controls.Add(Me.RichTextBox13)
-        Me.Panel3.Controls.Add(Me.RichTextBox12)
-        Me.Panel3.Controls.Add(Me.RichTextBox11)
-        Me.Panel3.Controls.Add(Me.TextBox9)
-        Me.Panel3.Controls.Add(Me.TextBox8)
-        Me.Panel3.Controls.Add(Me.TextBox6)
-        Me.Panel3.Controls.Add(Me.TextBox5)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Controls.Add(Me.TextBox3)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox28)
-        Me.Panel3.Controls.Add(Me.RichTextBox3)
-        Me.Panel3.Controls.Add(Me.TEL5TB)
-        Me.Panel3.Controls.Add(Me.TEL4TB)
-        Me.Panel3.Controls.Add(Me.TEL3TB)
-        Me.Panel3.Controls.Add(Me.TextBox29)
-        Me.Panel3.Controls.Add(Me.TextBox30)
-        Me.Panel3.Controls.Add(Me.Old5TB)
-        Me.Panel3.Controls.Add(Me.Old4TB)
-        Me.Panel3.Controls.Add(Me.Old3TB)
-        Me.Panel3.Controls.Add(Me.TextBox31)
-        Me.Panel3.Controls.Add(Me.Old1TB)
-        Me.Panel3.Controls.Add(Me.Relationship5TB)
-        Me.Panel3.Controls.Add(Me.Relationship4TB)
-        Me.Panel3.Controls.Add(Me.Relationship3TB)
-        Me.Panel3.Controls.Add(Me.Relationship2TB)
-        Me.Panel3.Controls.Add(Me.Relationship1TB)
-        Me.Panel3.Location = New System.Drawing.Point(6, 6)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(695, 708)
-        Me.Panel3.TabIndex = 1
-        '
         'RichTextBox12
         '
         Me.RichTextBox12.Location = New System.Drawing.Point(317, 177)
@@ -1220,20 +1027,216 @@ Partial Class zidouhyou
         Me.Relationship1TB.Size = New System.Drawing.Size(48, 34)
         Me.Relationship1TB.TabIndex = 5
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Panel4)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(822, 573)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "健康面"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Panel4
+        '
+        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
+        Me.Panel4.Controls.Add(Me.RichTextBox1)
+        Me.Panel4.Controls.Add(Me.CheckBox1)
+        Me.Panel4.Controls.Add(Me.OtherTextBox)
+        Me.Panel4.Controls.Add(Me.DetailsTextBox)
+        Me.Panel4.Controls.Add(Me.VulnerableSickTextBox)
+        Me.Panel4.Controls.Add(Me.SurgeryTextBox)
+        Me.Panel4.Controls.Add(Me.SickCheckBox9)
+        Me.Panel4.Controls.Add(Me.SickCheckBox8)
+        Me.Panel4.Controls.Add(Me.SickCheckBox7)
+        Me.Panel4.Controls.Add(Me.SickCheckBox6)
+        Me.Panel4.Controls.Add(Me.SickCheckBox5)
+        Me.Panel4.Controls.Add(Me.SickCheckBox4)
+        Me.Panel4.Controls.Add(Me.SickCheckBox3)
+        Me.Panel4.Controls.Add(Me.SickCheckBox2)
+        Me.Panel4.Controls.Add(Me.SickCheckBox1)
+        Me.Panel4.Controls.Add(Me.AllergiesRadioButton2)
+        Me.Panel4.Controls.Add(Me.AllergiesRadioButton1)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(706, 383)
+        Me.Panel4.TabIndex = 1
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(10, 319)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(674, 50)
+        Me.RichTextBox1.TabIndex = 20
+        Me.RichTextBox1.Text = ""
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(527, 87)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.TabIndex = 19
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'OtherTextBox
+        '
+        Me.OtherTextBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.OtherTextBox.Location = New System.Drawing.Point(592, 83)
+        Me.OtherTextBox.Name = "OtherTextBox"
+        Me.OtherTextBox.Size = New System.Drawing.Size(92, 21)
+        Me.OtherTextBox.TabIndex = 18
+        '
+        'DetailsTextBox
+        '
+        Me.DetailsTextBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.DetailsTextBox.Location = New System.Drawing.Point(505, 41)
+        Me.DetailsTextBox.Name = "DetailsTextBox"
+        Me.DetailsTextBox.Size = New System.Drawing.Size(179, 21)
+        Me.DetailsTextBox.TabIndex = 17
+        '
+        'VulnerableSickTextBox
+        '
+        Me.VulnerableSickTextBox.Font = New System.Drawing.Font("MS UI Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.VulnerableSickTextBox.Location = New System.Drawing.Point(260, 244)
+        Me.VulnerableSickTextBox.Name = "VulnerableSickTextBox"
+        Me.VulnerableSickTextBox.Size = New System.Drawing.Size(424, 39)
+        Me.VulnerableSickTextBox.TabIndex = 15
+        '
+        'SurgeryTextBox
+        '
+        Me.SurgeryTextBox.Font = New System.Drawing.Font("MS UI Gothic", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.SurgeryTextBox.Location = New System.Drawing.Point(140, 130)
+        Me.SurgeryTextBox.Name = "SurgeryTextBox"
+        Me.SurgeryTextBox.Size = New System.Drawing.Size(544, 39)
+        Me.SurgeryTextBox.TabIndex = 14
+        '
+        'SickCheckBox9
+        '
+        Me.SickCheckBox9.AutoSize = True
+        Me.SickCheckBox9.Location = New System.Drawing.Point(325, 214)
+        Me.SickCheckBox9.Name = "SickCheckBox9"
+        Me.SickCheckBox9.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox9.TabIndex = 11
+        Me.SickCheckBox9.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox8
+        '
+        Me.SickCheckBox8.AutoSize = True
+        Me.SickCheckBox8.Location = New System.Drawing.Point(217, 214)
+        Me.SickCheckBox8.Name = "SickCheckBox8"
+        Me.SickCheckBox8.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox8.TabIndex = 10
+        Me.SickCheckBox8.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox7
+        '
+        Me.SickCheckBox7.AutoSize = True
+        Me.SickCheckBox7.Location = New System.Drawing.Point(381, 184)
+        Me.SickCheckBox7.Name = "SickCheckBox7"
+        Me.SickCheckBox7.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox7.TabIndex = 9
+        Me.SickCheckBox7.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox6
+        '
+        Me.SickCheckBox6.AutoSize = True
+        Me.SickCheckBox6.Location = New System.Drawing.Point(315, 184)
+        Me.SickCheckBox6.Name = "SickCheckBox6"
+        Me.SickCheckBox6.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox6.TabIndex = 8
+        Me.SickCheckBox6.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox5
+        '
+        Me.SickCheckBox5.AutoSize = True
+        Me.SickCheckBox5.Location = New System.Drawing.Point(248, 184)
+        Me.SickCheckBox5.Name = "SickCheckBox5"
+        Me.SickCheckBox5.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox5.TabIndex = 7
+        Me.SickCheckBox5.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox4
+        '
+        Me.SickCheckBox4.AutoSize = True
+        Me.SickCheckBox4.Location = New System.Drawing.Point(450, 87)
+        Me.SickCheckBox4.Name = "SickCheckBox4"
+        Me.SickCheckBox4.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox4.TabIndex = 6
+        Me.SickCheckBox4.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox3
+        '
+        Me.SickCheckBox3.AutoSize = True
+        Me.SickCheckBox3.Location = New System.Drawing.Point(343, 87)
+        Me.SickCheckBox3.Name = "SickCheckBox3"
+        Me.SickCheckBox3.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox3.TabIndex = 5
+        Me.SickCheckBox3.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox2
+        '
+        Me.SickCheckBox2.AutoSize = True
+        Me.SickCheckBox2.Location = New System.Drawing.Point(248, 87)
+        Me.SickCheckBox2.Name = "SickCheckBox2"
+        Me.SickCheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox2.TabIndex = 4
+        Me.SickCheckBox2.UseVisualStyleBackColor = True
+        '
+        'SickCheckBox1
+        '
+        Me.SickCheckBox1.AutoSize = True
+        Me.SickCheckBox1.Location = New System.Drawing.Point(178, 87)
+        Me.SickCheckBox1.Name = "SickCheckBox1"
+        Me.SickCheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.SickCheckBox1.TabIndex = 3
+        Me.SickCheckBox1.UseVisualStyleBackColor = True
+        '
+        'AllergiesRadioButton2
+        '
+        Me.AllergiesRadioButton2.AutoSize = True
+        Me.AllergiesRadioButton2.Location = New System.Drawing.Point(304, 45)
+        Me.AllergiesRadioButton2.Name = "AllergiesRadioButton2"
+        Me.AllergiesRadioButton2.Size = New System.Drawing.Size(14, 13)
+        Me.AllergiesRadioButton2.TabIndex = 2
+        Me.AllergiesRadioButton2.TabStop = True
+        Me.AllergiesRadioButton2.UseVisualStyleBackColor = True
+        '
+        'AllergiesRadioButton1
+        '
+        Me.AllergiesRadioButton1.AutoSize = True
+        Me.AllergiesRadioButton1.Location = New System.Drawing.Point(248, 45)
+        Me.AllergiesRadioButton1.Name = "AllergiesRadioButton1"
+        Me.AllergiesRadioButton1.Size = New System.Drawing.Size(14, 13)
+        Me.AllergiesRadioButton1.TabIndex = 1
+        Me.AllergiesRadioButton1.TabStop = True
+        Me.AllergiesRadioButton1.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(74, 100)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.TabIndex = 19
+        '
         'zidouhyou
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(892, 750)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "zidouhyou"
         Me.Text = "児童票"
@@ -1247,11 +1250,11 @@ Partial Class zidouhyou
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1259,7 +1262,6 @@ Partial Class zidouhyou
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
@@ -1371,4 +1373,5 @@ Partial Class zidouhyou
     Friend WithEvents Relationship3TB As System.Windows.Forms.TextBox
     Friend WithEvents Relationship2TB As System.Windows.Forms.TextBox
     Friend WithEvents Relationship1TB As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class
