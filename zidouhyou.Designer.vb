@@ -271,6 +271,7 @@ Partial Class zidouhyou
         'Panel2
         '
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.womanButton)
         Me.Panel2.Controls.Add(Me.manButton)
@@ -295,7 +296,7 @@ Partial Class zidouhyou
         Me.Panel2.Controls.Add(Me.DateTimePicker2)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(806, 424)
+        Me.Panel2.Size = New System.Drawing.Size(826, 397)
         Me.Panel2.TabIndex = 1
         '
         'PictureBox1
@@ -570,7 +571,7 @@ Partial Class zidouhyou
         Me.Panel3.Controls.Add(Me.Relationship3TB)
         Me.Panel3.Controls.Add(Me.Relationship2TB)
         Me.Panel3.Controls.Add(Me.Relationship1TB)
-        Me.Panel3.Location = New System.Drawing.Point(6, 6)
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(695, 708)
         Me.Panel3.TabIndex = 1
