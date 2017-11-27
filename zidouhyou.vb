@@ -8,7 +8,7 @@ Public Class zidouhyou
         encsjis = System.Text.Encoding.GetEncoding("Shift_JIS")
     End Sub
 
-    Private Sub ChildTB1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles NameTB1.TextChanged
+    Private Sub ChildTB1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_Name.TextChanged
         Dim z As String = String.Empty
         For Each s As String In Me.NameTB1.Text
             If encsjis.GetBytes(s).Length = 2 Then
@@ -37,20 +37,20 @@ Public Class zidouhyou
 
     End Sub
 
-    Private Sub NicknameTB_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles NicknameTB.TextChanged
+    Private Sub NicknameTB_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_NickName.TextChanged
         Dim z As String = String.Empty
-        For Each s As String In Me.NicknameTB.Text
+        For Each s As String In Me.txt_NickName.Text
             If encsjis.GetBytes(s).Length = 2 Then
                 z = z & s
             End If
         Next
-        Me.NicknameTB.Text = z
+        Me.txt_NickName.Text = z
 
         ' 見つけたい文字のパターンを全角の数字・全角の英大文字・全角の英小文字を指定
         Dim re As New Regex("(?<moji>[０-９Ａ-Ｚａ-ｚ])")
 
         ' テキストボックス内の文字でパターンに合う文字を取得
-        Dim m As Match = re.Match(NicknameTB.Text)
+        Dim m As Match = re.Match(txt_NickName.Text)
 
         ' 見つかった文字を順に取得
         While m.Success
@@ -58,7 +58,7 @@ Public Class zidouhyou
             ' テキストボックス内の文字を置換
             ' 置換前の文字は取得した文字
             ' 置換後の文字は置換前の文字を半角に変換したもの
-            NicknameTB.Text = NicknameTB.Text.Replace(m.Result("${moji}"), StrConv(m.Result("${moji}"), VbStrConv.Narrow))
+            txt_NickName.Text = txt_NickName.Text.Replace(m.Result("${moji}"), StrConv(m.Result("${moji}"), VbStrConv.Narrow))
 
             ' 次の文字に移動
             m = m.NextMatch()
@@ -600,20 +600,20 @@ Public Class zidouhyou
         End If
     End Sub
 
-    Private Sub FuriganaTB_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles FuriganaTB.TextChanged
+    Private Sub FuriganaTB_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_NameKana.TextChanged
         Dim z As String = String.Empty
-        For Each s As String In Me.FuriganaTB.Text
+        For Each s As String In Me.txt_NameKana.Text
             If encsjis.GetBytes(s).Length = 2 Then
                 z = z & s
             End If
         Next
-        Me.FuriganaTB.Text = z
+        Me.txt_NameKana.Text = z
 
         ' 見つけたい文字のパターンを全角の数字・全角の英大文字・全角の英小文字を指定
         Dim re As New Regex("(?<moji>[０-９Ａ-Ｚａ-ｚ])")
 
         ' テキストボックス内の文字でパターンに合う文字を取得
-        Dim m As Match = re.Match(FuriganaTB.Text)
+        Dim m As Match = re.Match(txt_NameKana.Text)
 
         ' 見つかった文字を順に取得
         While m.Success
@@ -621,7 +621,7 @@ Public Class zidouhyou
             ' テキストボックス内の文字を置換
             ' 置換前の文字は取得した文字
             ' 置換後の文字は置換前の文を半角に変換したもの
-            FuriganaTB.Text = FuriganaTB.Text.Replace(m.Result("${moji}"), StrConv(m.Result("${moji}"), VbStrConv.Narrow))
+            txt_NameKana.Text = txt_NameKana.Text.Replace(m.Result("${moji}"), StrConv(m.Result("${moji}"), VbStrConv.Narrow))
 
             ' 次の文字に移動
             m = m.NextMatch()
@@ -636,5 +636,4 @@ Public Class zidouhyou
             e.Handled = True
         End If
     End Sub
-
 End Class

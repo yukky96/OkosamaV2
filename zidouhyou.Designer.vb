@@ -39,27 +39,20 @@ Partial Class zidouhyou
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.womanButton = New System.Windows.Forms.RadioButton()
-        Me.manButton = New System.Windows.Forms.RadioButton()
-        Me.TEL2TB = New System.Windows.Forms.TextBox()
-        Me.TEL1TB = New System.Windows.Forms.TextBox()
-        Me.Old2TB = New System.Windows.Forms.TextBox()
-        Me.OldTB = New System.Windows.Forms.TextBox()
-        Me.BirthdayTB = New System.Windows.Forms.TextBox()
-        Me.BirthmonthTB = New System.Windows.Forms.TextBox()
-        Me.BirthyearTB = New System.Windows.Forms.TextBox()
+        Me.txt_ChildTEL1 = New System.Windows.Forms.TextBox()
+        Me.txt_AgeMonth = New System.Windows.Forms.TextBox()
+        Me.txt_Age = New System.Windows.Forms.TextBox()
+        Me.txt_BirthDay = New System.Windows.Forms.TextBox()
+        Me.txt_BirthYear = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.AVGbodytempTB = New System.Windows.Forms.TextBox()
-        Me.familydoctorTB = New System.Windows.Forms.TextBox()
-        Me.StreetaddressTB = New System.Windows.Forms.TextBox()
-        Me.NameTB1 = New System.Windows.Forms.TextBox()
-        Me.NicknameTB = New System.Windows.Forms.TextBox()
-        Me.Postalcode2TB = New System.Windows.Forms.TextBox()
+        Me.txt_Temperature = New System.Windows.Forms.TextBox()
+        Me.txt_DoctorName = New System.Windows.Forms.TextBox()
+        Me.txt_Address = New System.Windows.Forms.TextBox()
+        Me.txt_NickName = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Postalcode1TB = New System.Windows.Forms.TextBox()
-        Me.MailaddressTB = New System.Windows.Forms.TextBox()
-        Me.FuriganaTB = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.txt_MailLocal = New System.Windows.Forms.TextBox()
+        Me.txt_NameKana = New System.Windows.Forms.TextBox()
+        Me.dtp_EntranceDay = New System.Windows.Forms.DateTimePicker()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -138,6 +131,23 @@ Partial Class zidouhyou
         Me.AllergiesRadioButton2 = New System.Windows.Forms.RadioButton()
         Me.AllergiesRadioButton1 = New System.Windows.Forms.RadioButton()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txt_BirthMonth = New System.Windows.Forms.TextBox()
+        Me.rdb_woman = New System.Windows.Forms.RadioButton()
+        Me.rdb_man = New System.Windows.Forms.RadioButton()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txt_MailDomain = New System.Windows.Forms.TextBox()
+        Me.txt_Name = New System.Windows.Forms.TextBox()
+        Me.txt_ChildTEL2 = New System.Windows.Forms.TextBox()
+        Me.txt_ChildTEL3 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txt_DoctorTEL1 = New System.Windows.Forms.TextBox()
+        Me.txt_DoctorTEL2 = New System.Windows.Forms.TextBox()
+        Me.txt_DoctorTEL3 = New System.Windows.Forms.TextBox()
+        Me.txt_PostalCode1 = New System.Windows.Forms.TextBox()
+        Me.txt_PostalCode2 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -202,9 +212,10 @@ Partial Class zidouhyou
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(263, 102)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(263, 100)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(184, 19)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(150, 21)
         Me.DateTimePicker1.TabIndex = 16
         '
         'MenuStrip1
@@ -251,7 +262,7 @@ Partial Class zidouhyou
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Location = New System.Drawing.Point(9, 139)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 139)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(830, 599)
@@ -262,7 +273,7 @@ Partial Class zidouhyou
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
         Me.TabPage1.Size = New System.Drawing.Size(822, 573)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "お子様"
@@ -273,232 +284,178 @@ Partial Class zidouhyou
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.womanButton)
-        Me.Panel2.Controls.Add(Me.manButton)
-        Me.Panel2.Controls.Add(Me.TEL2TB)
-        Me.Panel2.Controls.Add(Me.TEL1TB)
-        Me.Panel2.Controls.Add(Me.Old2TB)
-        Me.Panel2.Controls.Add(Me.OldTB)
-        Me.Panel2.Controls.Add(Me.BirthdayTB)
-        Me.Panel2.Controls.Add(Me.BirthmonthTB)
-        Me.Panel2.Controls.Add(Me.BirthyearTB)
+        Me.Panel2.Controls.Add(Me.rdb_woman)
+        Me.Panel2.Controls.Add(Me.rdb_man)
+        Me.Panel2.Controls.Add(Me.txt_DoctorTEL3)
+        Me.Panel2.Controls.Add(Me.txt_ChildTEL3)
+        Me.Panel2.Controls.Add(Me.txt_DoctorTEL2)
+        Me.Panel2.Controls.Add(Me.txt_DoctorTEL1)
+        Me.Panel2.Controls.Add(Me.txt_ChildTEL2)
+        Me.Panel2.Controls.Add(Me.txt_PostalCode2)
+        Me.Panel2.Controls.Add(Me.txt_PostalCode1)
+        Me.Panel2.Controls.Add(Me.txt_ChildTEL1)
+        Me.Panel2.Controls.Add(Me.txt_AgeMonth)
+        Me.Panel2.Controls.Add(Me.txt_Age)
+        Me.Panel2.Controls.Add(Me.txt_BirthDay)
+        Me.Panel2.Controls.Add(Me.txt_BirthMonth)
+        Me.Panel2.Controls.Add(Me.txt_BirthYear)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.AVGbodytempTB)
-        Me.Panel2.Controls.Add(Me.familydoctorTB)
-        Me.Panel2.Controls.Add(Me.StreetaddressTB)
-        Me.Panel2.Controls.Add(Me.NameTB1)
-        Me.Panel2.Controls.Add(Me.NicknameTB)
-        Me.Panel2.Controls.Add(Me.Postalcode2TB)
+        Me.Panel2.Controls.Add(Me.txt_Temperature)
+        Me.Panel2.Controls.Add(Me.txt_DoctorName)
+        Me.Panel2.Controls.Add(Me.txt_Address)
+        Me.Panel2.Controls.Add(Me.txt_Name)
+        Me.Panel2.Controls.Add(Me.txt_NickName)
+        Me.Panel2.Controls.Add(Me.Label13)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Postalcode1TB)
-        Me.Panel2.Controls.Add(Me.MailaddressTB)
-        Me.Panel2.Controls.Add(Me.FuriganaTB)
-        Me.Panel2.Controls.Add(Me.DateTimePicker2)
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Controls.Add(Me.txt_MailDomain)
+        Me.Panel2.Controls.Add(Me.txt_MailLocal)
+        Me.Panel2.Controls.Add(Me.txt_NameKana)
+        Me.Panel2.Controls.Add(Me.dtp_EntranceDay)
+        Me.Panel2.Location = New System.Drawing.Point(0, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(826, 397)
+        Me.Panel2.Size = New System.Drawing.Size(778, 397)
         Me.Panel2.TabIndex = 1
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.PictureBox1.Location = New System.Drawing.Point(522, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(500, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(274, 58)
+        Me.PictureBox1.Size = New System.Drawing.Size(296, 39)
         Me.PictureBox1.TabIndex = 43
         Me.PictureBox1.TabStop = False
         '
-        'womanButton
+        'txt_ChildTEL1
         '
-        Me.womanButton.AutoSize = True
-        Me.womanButton.Location = New System.Drawing.Point(723, 185)
-        Me.womanButton.Name = "womanButton"
-        Me.womanButton.Size = New System.Drawing.Size(14, 13)
-        Me.womanButton.TabIndex = 42
-        Me.womanButton.TabStop = True
-        Me.womanButton.UseVisualStyleBackColor = True
+        Me.txt_ChildTEL1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_ChildTEL1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_ChildTEL1.Location = New System.Drawing.Point(607, 249)
+        Me.txt_ChildTEL1.MaxLength = 15
+        Me.txt_ChildTEL1.Name = "txt_ChildTEL1"
+        Me.txt_ChildTEL1.Size = New System.Drawing.Size(40, 23)
+        Me.txt_ChildTEL1.TabIndex = 37
         '
-        'manButton
+        'txt_AgeMonth
         '
-        Me.manButton.AutoSize = True
-        Me.manButton.Location = New System.Drawing.Point(679, 185)
-        Me.manButton.Name = "manButton"
-        Me.manButton.Size = New System.Drawing.Size(14, 13)
-        Me.manButton.TabIndex = 41
-        Me.manButton.TabStop = True
-        Me.manButton.UseVisualStyleBackColor = True
+        Me.txt_AgeMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_AgeMonth.Location = New System.Drawing.Point(464, 156)
+        Me.txt_AgeMonth.MaxLength = 2
+        Me.txt_AgeMonth.Name = "txt_AgeMonth"
+        Me.txt_AgeMonth.Size = New System.Drawing.Size(48, 23)
+        Me.txt_AgeMonth.TabIndex = 36
         '
-        'TEL2TB
+        'txt_Age
         '
-        Me.TEL2TB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TEL2TB.Location = New System.Drawing.Point(622, 372)
-        Me.TEL2TB.MaxLength = 15
-        Me.TEL2TB.Name = "TEL2TB"
-        Me.TEL2TB.Size = New System.Drawing.Size(174, 23)
-        Me.TEL2TB.TabIndex = 38
+        Me.txt_Age.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_Age.Location = New System.Drawing.Point(394, 156)
+        Me.txt_Age.MaxLength = 1
+        Me.txt_Age.Name = "txt_Age"
+        Me.txt_Age.Size = New System.Drawing.Size(48, 23)
+        Me.txt_Age.TabIndex = 35
         '
-        'TEL1TB
+        'txt_BirthDay
         '
-        Me.TEL1TB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TEL1TB.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.TEL1TB.Location = New System.Drawing.Point(622, 281)
-        Me.TEL1TB.MaxLength = 15
-        Me.TEL1TB.Name = "TEL1TB"
-        Me.TEL1TB.Size = New System.Drawing.Size(174, 23)
-        Me.TEL1TB.TabIndex = 37
+        Me.txt_BirthDay.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_BirthDay.Location = New System.Drawing.Point(308, 156)
+        Me.txt_BirthDay.MaxLength = 2
+        Me.txt_BirthDay.Name = "txt_BirthDay"
+        Me.txt_BirthDay.Size = New System.Drawing.Size(48, 23)
+        Me.txt_BirthDay.TabIndex = 34
         '
-        'Old2TB
+        'txt_BirthYear
         '
-        Me.Old2TB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Old2TB.Location = New System.Drawing.Point(487, 178)
-        Me.Old2TB.MaxLength = 2
-        Me.Old2TB.Name = "Old2TB"
-        Me.Old2TB.Size = New System.Drawing.Size(48, 23)
-        Me.Old2TB.TabIndex = 36
-        '
-        'OldTB
-        '
-        Me.OldTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.OldTB.Location = New System.Drawing.Point(415, 178)
-        Me.OldTB.MaxLength = 1
-        Me.OldTB.Name = "OldTB"
-        Me.OldTB.Size = New System.Drawing.Size(48, 23)
-        Me.OldTB.TabIndex = 35
-        '
-        'BirthdayTB
-        '
-        Me.BirthdayTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BirthdayTB.Location = New System.Drawing.Point(326, 178)
-        Me.BirthdayTB.MaxLength = 2
-        Me.BirthdayTB.Name = "BirthdayTB"
-        Me.BirthdayTB.Size = New System.Drawing.Size(48, 23)
-        Me.BirthdayTB.TabIndex = 34
-        '
-        'BirthmonthTB
-        '
-        Me.BirthmonthTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BirthmonthTB.Location = New System.Drawing.Point(252, 178)
-        Me.BirthmonthTB.MaxLength = 2
-        Me.BirthmonthTB.Name = "BirthmonthTB"
-        Me.BirthmonthTB.Size = New System.Drawing.Size(48, 23)
-        Me.BirthmonthTB.TabIndex = 33
-        '
-        'BirthyearTB
-        '
-        Me.BirthyearTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BirthyearTB.Location = New System.Drawing.Point(186, 178)
-        Me.BirthyearTB.MaxLength = 4
-        Me.BirthyearTB.Name = "BirthyearTB"
-        Me.BirthyearTB.Size = New System.Drawing.Size(44, 23)
-        Me.BirthyearTB.TabIndex = 32
+        Me.txt_BirthYear.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_BirthYear.Location = New System.Drawing.Point(172, 156)
+        Me.txt_BirthYear.MaxLength = 4
+        Me.txt_BirthYear.Name = "txt_BirthYear"
+        Me.txt_BirthYear.Size = New System.Drawing.Size(44, 23)
+        Me.txt_BirthYear.TabIndex = 32
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label3.Location = New System.Drawing.Point(756, 228)
+        Me.Label3.Location = New System.Drawing.Point(731, 204)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(28, 19)
         Me.Label3.TabIndex = 30
         Me.Label3.Text = "度"
         '
-        'AVGbodytempTB
+        'txt_Temperature
         '
-        Me.AVGbodytempTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.AVGbodytempTB.Location = New System.Drawing.Point(663, 227)
-        Me.AVGbodytempTB.MaxLength = 2
-        Me.AVGbodytempTB.Name = "AVGbodytempTB"
-        Me.AVGbodytempTB.Size = New System.Drawing.Size(87, 23)
-        Me.AVGbodytempTB.TabIndex = 29
+        Me.txt_Temperature.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_Temperature.Location = New System.Drawing.Point(635, 203)
+        Me.txt_Temperature.MaxLength = 2
+        Me.txt_Temperature.Name = "txt_Temperature"
+        Me.txt_Temperature.Size = New System.Drawing.Size(87, 23)
+        Me.txt_Temperature.TabIndex = 29
         '
-        'familydoctorTB
+        'txt_DoctorName
         '
-        Me.familydoctorTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.familydoctorTB.Location = New System.Drawing.Point(154, 372)
-        Me.familydoctorTB.Name = "familydoctorTB"
-        Me.familydoctorTB.Size = New System.Drawing.Size(424, 34)
-        Me.familydoctorTB.TabIndex = 28
+        Me.txt_DoctorName.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_DoctorName.Location = New System.Drawing.Point(154, 338)
+        Me.txt_DoctorName.Name = "txt_DoctorName"
+        Me.txt_DoctorName.Size = New System.Drawing.Size(398, 34)
+        Me.txt_DoctorName.TabIndex = 28
         '
-        'StreetaddressTB
+        'txt_Address
         '
-        Me.StreetaddressTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.StreetaddressTB.Location = New System.Drawing.Point(154, 272)
-        Me.StreetaddressTB.Name = "StreetaddressTB"
-        Me.StreetaddressTB.Size = New System.Drawing.Size(424, 34)
-        Me.StreetaddressTB.TabIndex = 27
+        Me.txt_Address.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_Address.Location = New System.Drawing.Point(154, 244)
+        Me.txt_Address.Name = "txt_Address"
+        Me.txt_Address.Size = New System.Drawing.Size(398, 34)
+        Me.txt_Address.TabIndex = 27
         '
-        'NameTB1
+        'txt_NickName
         '
-        Me.NameTB1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.NameTB1.Location = New System.Drawing.Point(154, 109)
-        Me.NameTB1.Name = "NameTB1"
-        Me.NameTB1.Size = New System.Drawing.Size(282, 34)
-        Me.NameTB1.TabIndex = 26
-        '
-        'NicknameTB
-        '
-        Me.NicknameTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.NicknameTB.Location = New System.Drawing.Point(475, 95)
-        Me.NicknameTB.MaxLength = 7
-        Me.NicknameTB.Name = "NicknameTB"
-        Me.NicknameTB.Size = New System.Drawing.Size(103, 27)
-        Me.NicknameTB.TabIndex = 25
-        '
-        'Postalcode2TB
-        '
-        Me.Postalcode2TB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Postalcode2TB.Location = New System.Drawing.Point(261, 227)
-        Me.Postalcode2TB.MaxLength = 4
-        Me.Postalcode2TB.Name = "Postalcode2TB"
-        Me.Postalcode2TB.Size = New System.Drawing.Size(86, 23)
-        Me.Postalcode2TB.TabIndex = 14
+        Me.txt_NickName.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_NickName.Location = New System.Drawing.Point(464, 73)
+        Me.txt_NickName.MaxLength = 7
+        Me.txt_NickName.Name = "txt_NickName"
+        Me.txt_NickName.Size = New System.Drawing.Size(88, 34)
+        Me.txt_NickName.TabIndex = 25
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label4.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label4.Location = New System.Drawing.Point(236, 231)
+        Me.Label4.Location = New System.Drawing.Point(218, 204)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(19, 19)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "-"
         '
-        'Postalcode1TB
+        'txt_MailLocal
         '
-        Me.Postalcode1TB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Postalcode1TB.Location = New System.Drawing.Point(172, 227)
-        Me.Postalcode1TB.MaxLength = 3
-        Me.Postalcode1TB.Name = "Postalcode1TB"
-        Me.Postalcode1TB.Size = New System.Drawing.Size(58, 23)
-        Me.Postalcode1TB.TabIndex = 8
+        Me.txt_MailLocal.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_MailLocal.Location = New System.Drawing.Point(154, 297)
+        Me.txt_MailLocal.Name = "txt_MailLocal"
+        Me.txt_MailLocal.Size = New System.Drawing.Size(398, 23)
+        Me.txt_MailLocal.TabIndex = 7
         '
-        'MailaddressTB
+        'txt_NameKana
         '
-        Me.MailaddressTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.MailaddressTB.Location = New System.Drawing.Point(154, 325)
-        Me.MailaddressTB.Name = "MailaddressTB"
-        Me.MailaddressTB.Size = New System.Drawing.Size(642, 23)
-        Me.MailaddressTB.TabIndex = 7
+        Me.txt_NameKana.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_NameKana.ImeMode = System.Windows.Forms.ImeMode.Katakana
+        Me.txt_NameKana.Location = New System.Drawing.Point(154, 48)
+        Me.txt_NameKana.Name = "txt_NameKana"
+        Me.txt_NameKana.Size = New System.Drawing.Size(262, 23)
+        Me.txt_NameKana.TabIndex = 6
         '
-        'FuriganaTB
+        'dtp_EntranceDay
         '
-        Me.FuriganaTB.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.FuriganaTB.ImeMode = System.Windows.Forms.ImeMode.Katakana
-        Me.FuriganaTB.Location = New System.Drawing.Point(154, 66)
-        Me.FuriganaTB.Name = "FuriganaTB"
-        Me.FuriganaTB.Size = New System.Drawing.Size(282, 23)
-        Me.FuriganaTB.TabIndex = 6
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("ＭＳ Ｐゴシック", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DateTimePicker2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(637, 100)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(159, 19)
-        Me.DateTimePicker2.TabIndex = 5
+        Me.dtp_EntranceDay.CalendarFont = New System.Drawing.Font("ＭＳ Ｐゴシック", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.dtp_EntranceDay.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.dtp_EntranceDay.Location = New System.Drawing.Point(617, 79)
+        Me.dtp_EntranceDay.Name = "dtp_EntranceDay"
+        Me.dtp_EntranceDay.Size = New System.Drawing.Size(142, 21)
+        Me.dtp_EntranceDay.TabIndex = 5
         '
         'TabPage2
         '
@@ -506,7 +463,7 @@ Partial Class zidouhyou
         Me.TabPage2.Controls.Add(Me.Panel3)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
         Me.TabPage2.Size = New System.Drawing.Size(822, 573)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "家族構成"
@@ -847,7 +804,7 @@ Partial Class zidouhyou
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(196, 523)
+        Me.TextBox8.Location = New System.Drawing.Point(198, 523)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(48, 34)
         Me.TextBox8.TabIndex = 42
@@ -855,7 +812,7 @@ Partial Class zidouhyou
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(196, 466)
+        Me.TextBox6.Location = New System.Drawing.Point(198, 466)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(48, 34)
         Me.TextBox6.TabIndex = 40
@@ -871,7 +828,7 @@ Partial Class zidouhyou
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(196, 409)
+        Me.TextBox1.Location = New System.Drawing.Point(198, 409)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(48, 34)
         Me.TextBox1.TabIndex = 38
@@ -895,7 +852,7 @@ Partial Class zidouhyou
         'TextBox28
         '
         Me.TextBox28.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TextBox28.Location = New System.Drawing.Point(196, 355)
+        Me.TextBox28.Location = New System.Drawing.Point(198, 355)
         Me.TextBox28.Name = "TextBox28"
         Me.TextBox28.Size = New System.Drawing.Size(48, 34)
         Me.TextBox28.TabIndex = 35
@@ -991,7 +948,7 @@ Partial Class zidouhyou
         'Relationship5TB
         '
         Me.Relationship5TB.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Relationship5TB.Location = New System.Drawing.Point(196, 297)
+        Me.Relationship5TB.Location = New System.Drawing.Point(198, 297)
         Me.Relationship5TB.Name = "Relationship5TB"
         Me.Relationship5TB.Size = New System.Drawing.Size(48, 34)
         Me.Relationship5TB.TabIndex = 9
@@ -999,7 +956,7 @@ Partial Class zidouhyou
         'Relationship4TB
         '
         Me.Relationship4TB.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Relationship4TB.Location = New System.Drawing.Point(196, 243)
+        Me.Relationship4TB.Location = New System.Drawing.Point(198, 242)
         Me.Relationship4TB.Name = "Relationship4TB"
         Me.Relationship4TB.Size = New System.Drawing.Size(48, 34)
         Me.Relationship4TB.TabIndex = 8
@@ -1007,7 +964,7 @@ Partial Class zidouhyou
         'Relationship3TB
         '
         Me.Relationship3TB.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Relationship3TB.Location = New System.Drawing.Point(196, 185)
+        Me.Relationship3TB.Location = New System.Drawing.Point(198, 185)
         Me.Relationship3TB.Name = "Relationship3TB"
         Me.Relationship3TB.Size = New System.Drawing.Size(48, 34)
         Me.Relationship3TB.TabIndex = 7
@@ -1015,7 +972,7 @@ Partial Class zidouhyou
         'Relationship2TB
         '
         Me.Relationship2TB.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Relationship2TB.Location = New System.Drawing.Point(196, 128)
+        Me.Relationship2TB.Location = New System.Drawing.Point(198, 128)
         Me.Relationship2TB.Name = "Relationship2TB"
         Me.Relationship2TB.Size = New System.Drawing.Size(48, 34)
         Me.Relationship2TB.TabIndex = 6
@@ -1023,7 +980,7 @@ Partial Class zidouhyou
         'Relationship1TB
         '
         Me.Relationship1TB.Font = New System.Drawing.Font("MS UI Gothic", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Relationship1TB.Location = New System.Drawing.Point(196, 73)
+        Me.Relationship1TB.Location = New System.Drawing.Point(198, 73)
         Me.Relationship1TB.Name = "Relationship1TB"
         Me.Relationship1TB.Size = New System.Drawing.Size(48, 34)
         Me.Relationship1TB.TabIndex = 5
@@ -1033,7 +990,7 @@ Partial Class zidouhyou
         Me.TabPage3.Controls.Add(Me.Panel4)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
         Me.TabPage3.Size = New System.Drawing.Size(822, 573)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "健康面"
@@ -1216,12 +1173,182 @@ Partial Class zidouhyou
         '
         'ComboBox1
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(74, 100)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 19
+        '
+        'txt_BirthMonth
+        '
+        Me.txt_BirthMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_BirthMonth.Location = New System.Drawing.Point(240, 156)
+        Me.txt_BirthMonth.MaxLength = 4
+        Me.txt_BirthMonth.Name = "txt_BirthMonth"
+        Me.txt_BirthMonth.Size = New System.Drawing.Size(44, 23)
+        Me.txt_BirthMonth.TabIndex = 32
+        '
+        'rdb_woman
+        '
+        Me.rdb_woman.AutoSize = True
+        Me.rdb_woman.Location = New System.Drawing.Point(695, 161)
+        Me.rdb_woman.Name = "rdb_woman"
+        Me.rdb_woman.Size = New System.Drawing.Size(14, 13)
+        Me.rdb_woman.TabIndex = 42
+        Me.rdb_woman.TabStop = True
+        Me.rdb_woman.UseVisualStyleBackColor = True
+        '
+        'rdb_man
+        '
+        Me.rdb_man.AutoSize = True
+        Me.rdb_man.Location = New System.Drawing.Point(655, 161)
+        Me.rdb_man.Name = "rdb_man"
+        Me.rdb_man.Size = New System.Drawing.Size(14, 13)
+        Me.rdb_man.TabIndex = 41
+        Me.rdb_man.TabStop = True
+        Me.rdb_man.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label9.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label9.Location = New System.Drawing.Point(645, 250)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(19, 19)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "-"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label10.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label10.Location = New System.Drawing.Point(700, 250)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(19, 19)
+        Me.Label10.TabIndex = 13
+        Me.Label10.Text = "-"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label11.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label11.Location = New System.Drawing.Point(558, 298)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(22, 19)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "@"
+        '
+        'txt_MailDomain
+        '
+        Me.txt_MailDomain.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_MailDomain.Location = New System.Drawing.Point(586, 297)
+        Me.txt_MailDomain.Name = "txt_MailDomain"
+        Me.txt_MailDomain.Size = New System.Drawing.Size(173, 23)
+        Me.txt_MailDomain.TabIndex = 7
+        '
+        'txt_Name
+        '
+        Me.txt_Name.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_Name.Location = New System.Drawing.Point(154, 89)
+        Me.txt_Name.Name = "txt_Name"
+        Me.txt_Name.Size = New System.Drawing.Size(262, 34)
+        Me.txt_Name.TabIndex = 26
+        '
+        'txt_ChildTEL2
+        '
+        Me.txt_ChildTEL2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_ChildTEL2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_ChildTEL2.Location = New System.Drawing.Point(661, 249)
+        Me.txt_ChildTEL2.MaxLength = 15
+        Me.txt_ChildTEL2.Name = "txt_ChildTEL2"
+        Me.txt_ChildTEL2.Size = New System.Drawing.Size(40, 23)
+        Me.txt_ChildTEL2.TabIndex = 37
+        '
+        'txt_ChildTEL3
+        '
+        Me.txt_ChildTEL3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_ChildTEL3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_ChildTEL3.Location = New System.Drawing.Point(712, 249)
+        Me.txt_ChildTEL3.MaxLength = 15
+        Me.txt_ChildTEL3.Name = "txt_ChildTEL3"
+        Me.txt_ChildTEL3.Size = New System.Drawing.Size(40, 23)
+        Me.txt_ChildTEL3.TabIndex = 37
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label12.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label12.Location = New System.Drawing.Point(645, 345)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(19, 19)
+        Me.Label12.TabIndex = 13
+        Me.Label12.Text = "-"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label13.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label13.Location = New System.Drawing.Point(700, 345)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(19, 19)
+        Me.Label13.TabIndex = 13
+        Me.Label13.Text = "-"
+        '
+        'txt_DoctorTEL1
+        '
+        Me.txt_DoctorTEL1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_DoctorTEL1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_DoctorTEL1.Location = New System.Drawing.Point(607, 344)
+        Me.txt_DoctorTEL1.MaxLength = 15
+        Me.txt_DoctorTEL1.Name = "txt_DoctorTEL1"
+        Me.txt_DoctorTEL1.Size = New System.Drawing.Size(40, 23)
+        Me.txt_DoctorTEL1.TabIndex = 37
+        '
+        'txt_DoctorTEL2
+        '
+        Me.txt_DoctorTEL2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_DoctorTEL2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_DoctorTEL2.Location = New System.Drawing.Point(661, 344)
+        Me.txt_DoctorTEL2.MaxLength = 15
+        Me.txt_DoctorTEL2.Name = "txt_DoctorTEL2"
+        Me.txt_DoctorTEL2.Size = New System.Drawing.Size(40, 23)
+        Me.txt_DoctorTEL2.TabIndex = 37
+        '
+        'txt_DoctorTEL3
+        '
+        Me.txt_DoctorTEL3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_DoctorTEL3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_DoctorTEL3.Location = New System.Drawing.Point(712, 344)
+        Me.txt_DoctorTEL3.MaxLength = 15
+        Me.txt_DoctorTEL3.Name = "txt_DoctorTEL3"
+        Me.txt_DoctorTEL3.Size = New System.Drawing.Size(40, 23)
+        Me.txt_DoctorTEL3.TabIndex = 37
+        '
+        'txt_PostalCode1
+        '
+        Me.txt_PostalCode1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_PostalCode1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_PostalCode1.Location = New System.Drawing.Point(172, 203)
+        Me.txt_PostalCode1.MaxLength = 15
+        Me.txt_PostalCode1.Name = "txt_PostalCode1"
+        Me.txt_PostalCode1.Size = New System.Drawing.Size(40, 23)
+        Me.txt_PostalCode1.TabIndex = 37
+        '
+        'txt_PostalCode2
+        '
+        Me.txt_PostalCode2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txt_PostalCode2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.txt_PostalCode2.Location = New System.Drawing.Point(243, 203)
+        Me.txt_PostalCode2.MaxLength = 15
+        Me.txt_PostalCode2.Name = "txt_PostalCode2"
+        Me.txt_PostalCode2.Size = New System.Drawing.Size(40, 23)
+        Me.txt_PostalCode2.TabIndex = 37
         '
         'zidouhyou
         '
@@ -1277,28 +1404,20 @@ Partial Class zidouhyou
     Friend WithEvents 終了XToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents womanButton As System.Windows.Forms.RadioButton
-    Friend WithEvents manButton As System.Windows.Forms.RadioButton
-    Friend WithEvents TEL2TB As System.Windows.Forms.TextBox
-    Friend WithEvents TEL1TB As System.Windows.Forms.TextBox
-    Friend WithEvents Old2TB As System.Windows.Forms.TextBox
-    Friend WithEvents OldTB As System.Windows.Forms.TextBox
-    Friend WithEvents BirthdayTB As System.Windows.Forms.TextBox
-    Friend WithEvents BirthmonthTB As System.Windows.Forms.TextBox
-    Friend WithEvents BirthyearTB As System.Windows.Forms.TextBox
+    Friend WithEvents txt_ChildTEL1 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_AgeMonth As System.Windows.Forms.TextBox
+    Friend WithEvents txt_Age As System.Windows.Forms.TextBox
+    Friend WithEvents txt_BirthDay As System.Windows.Forms.TextBox
+    Friend WithEvents txt_BirthYear As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents AVGbodytempTB As System.Windows.Forms.TextBox
-    Friend WithEvents familydoctorTB As System.Windows.Forms.TextBox
-    Friend WithEvents StreetaddressTB As System.Windows.Forms.TextBox
-    Friend WithEvents NameTB1 As System.Windows.Forms.TextBox
-    Friend WithEvents NicknameTB As System.Windows.Forms.TextBox
-    Friend WithEvents Postalcode2TB As System.Windows.Forms.TextBox
+    Friend WithEvents txt_Temperature As System.Windows.Forms.TextBox
+    Friend WithEvents txt_DoctorName As System.Windows.Forms.TextBox
+    Friend WithEvents txt_Address As System.Windows.Forms.TextBox
+    Friend WithEvents txt_NickName As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Postalcode1TB As System.Windows.Forms.TextBox
-    Friend WithEvents MailaddressTB As System.Windows.Forms.TextBox
-    Friend WithEvents FuriganaTB As System.Windows.Forms.TextBox
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents txt_MailLocal As System.Windows.Forms.TextBox
+    Friend WithEvents txt_NameKana As System.Windows.Forms.TextBox
+    Friend WithEvents dtp_EntranceDay As System.Windows.Forms.DateTimePicker
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents DetailsTextBox As System.Windows.Forms.TextBox
     Friend WithEvents VulnerableSickTextBox As System.Windows.Forms.TextBox
@@ -1375,4 +1494,22 @@ Partial Class zidouhyou
     Friend WithEvents Relationship2TB As System.Windows.Forms.TextBox
     Friend WithEvents Relationship1TB As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents rdb_woman As System.Windows.Forms.RadioButton
+    Friend WithEvents rdb_man As System.Windows.Forms.RadioButton
+    Friend WithEvents txt_BirthMonth As System.Windows.Forms.TextBox
+    Friend WithEvents txt_Name As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents txt_MailDomain As System.Windows.Forms.TextBox
+    Friend WithEvents txt_DoctorTEL3 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_ChildTEL3 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_DoctorTEL2 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_DoctorTEL1 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_ChildTEL2 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_PostalCode2 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_PostalCode1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 End Class
