@@ -21,7 +21,7 @@ Public Class ChildInfoAdd
         Dim re As New Regex("(?<moji>[０-９Ａ-Ｚａ-ｚ])")
 
         ' テキストボックス内の文字でパターンに合う文字を取得
-        Dim m As Match = re.Match(NameTB1.Text)
+        Dim m As Match = re.Match(txt_ChildName.Text)
 
         ' 見つかった文字を順に取得
         While m.Success

@@ -309,7 +309,7 @@ Partial Class ChildInfoAdd
         Me.TabControl1.Location = New System.Drawing.Point(12, 139)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(793, 599)
+        Me.TabControl1.Size = New System.Drawing.Size(793, 427)
         Me.TabControl1.TabIndex = 2
         '
         'TabPage1
@@ -318,7 +318,7 @@ Partial Class ChildInfoAdd
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(785, 573)
+        Me.TabPage1.Size = New System.Drawing.Size(785, 401)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "お子様"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -361,7 +361,7 @@ Partial Class ChildInfoAdd
         Me.Panel2.Controls.Add(Me.dtp_EntranceDay)
         Me.Panel2.Location = New System.Drawing.Point(0, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(778, 397)
+        Me.Panel2.Size = New System.Drawing.Size(778, 392)
         Me.Panel2.TabIndex = 0
         '
         'PictureBox1
@@ -678,7 +678,7 @@ Partial Class ChildInfoAdd
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(785, 573)
+        Me.TabPage2.Size = New System.Drawing.Size(785, 401)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "家族構成"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1645,7 +1645,7 @@ Partial Class ChildInfoAdd
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(785, 573)
+        Me.TabPage3.Size = New System.Drawing.Size(785, 401)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "健康面"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1834,12 +1834,12 @@ Partial Class ChildInfoAdd
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 0
         '
-        'zidouhyou
+        'ChildInfoAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(818, 750)
+        Me.ClientSize = New System.Drawing.Size(818, 566)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -1850,7 +1850,7 @@ Partial Class ChildInfoAdd
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "zidouhyou"
+        Me.Name = "ChildInfoAdd"
         Me.Text = "児童票"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
