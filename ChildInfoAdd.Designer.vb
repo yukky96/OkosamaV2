@@ -398,7 +398,7 @@ Partial Class ChildInfoAdd
         Me.txt_DoctorTEL3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_DoctorTEL3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_DoctorTEL3.Location = New System.Drawing.Point(712, 342)
-        Me.txt_DoctorTEL3.MaxLength = 15
+        Me.txt_DoctorTEL3.MaxLength = 4
         Me.txt_DoctorTEL3.Name = "txt_DoctorTEL3"
         Me.txt_DoctorTEL3.Size = New System.Drawing.Size(40, 23)
         Me.txt_DoctorTEL3.TabIndex = 22
@@ -408,7 +408,7 @@ Partial Class ChildInfoAdd
         Me.txt_ChildTEL3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_ChildTEL3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_ChildTEL3.Location = New System.Drawing.Point(712, 247)
-        Me.txt_ChildTEL3.MaxLength = 15
+        Me.txt_ChildTEL3.MaxLength = 4
         Me.txt_ChildTEL3.Name = "txt_ChildTEL3"
         Me.txt_ChildTEL3.Size = New System.Drawing.Size(40, 23)
         Me.txt_ChildTEL3.TabIndex = 16
@@ -418,7 +418,7 @@ Partial Class ChildInfoAdd
         Me.txt_DoctorTEL2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_DoctorTEL2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_DoctorTEL2.Location = New System.Drawing.Point(661, 342)
-        Me.txt_DoctorTEL2.MaxLength = 15
+        Me.txt_DoctorTEL2.MaxLength = 4
         Me.txt_DoctorTEL2.Name = "txt_DoctorTEL2"
         Me.txt_DoctorTEL2.Size = New System.Drawing.Size(40, 23)
         Me.txt_DoctorTEL2.TabIndex = 21
@@ -428,7 +428,7 @@ Partial Class ChildInfoAdd
         Me.txt_DoctorTEL1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_DoctorTEL1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_DoctorTEL1.Location = New System.Drawing.Point(607, 342)
-        Me.txt_DoctorTEL1.MaxLength = 15
+        Me.txt_DoctorTEL1.MaxLength = 4
         Me.txt_DoctorTEL1.Name = "txt_DoctorTEL1"
         Me.txt_DoctorTEL1.Size = New System.Drawing.Size(40, 23)
         Me.txt_DoctorTEL1.TabIndex = 20
@@ -438,7 +438,7 @@ Partial Class ChildInfoAdd
         Me.txt_ChildTEL2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_ChildTEL2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_ChildTEL2.Location = New System.Drawing.Point(661, 247)
-        Me.txt_ChildTEL2.MaxLength = 15
+        Me.txt_ChildTEL2.MaxLength = 4
         Me.txt_ChildTEL2.Name = "txt_ChildTEL2"
         Me.txt_ChildTEL2.Size = New System.Drawing.Size(40, 23)
         Me.txt_ChildTEL2.TabIndex = 15
@@ -448,7 +448,7 @@ Partial Class ChildInfoAdd
         Me.txt_PostalCode2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_PostalCode2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_PostalCode2.Location = New System.Drawing.Point(243, 201)
-        Me.txt_PostalCode2.MaxLength = 15
+        Me.txt_PostalCode2.MaxLength = 4
         Me.txt_PostalCode2.Name = "txt_PostalCode2"
         Me.txt_PostalCode2.Size = New System.Drawing.Size(40, 23)
         Me.txt_PostalCode2.TabIndex = 11
@@ -458,7 +458,7 @@ Partial Class ChildInfoAdd
         Me.txt_PostalCode1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_PostalCode1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_PostalCode1.Location = New System.Drawing.Point(172, 201)
-        Me.txt_PostalCode1.MaxLength = 15
+        Me.txt_PostalCode1.MaxLength = 3
         Me.txt_PostalCode1.Name = "txt_PostalCode1"
         Me.txt_PostalCode1.Size = New System.Drawing.Size(40, 23)
         Me.txt_PostalCode1.TabIndex = 10
@@ -468,7 +468,7 @@ Partial Class ChildInfoAdd
         Me.txt_ChildTEL1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_ChildTEL1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_ChildTEL1.Location = New System.Drawing.Point(607, 247)
-        Me.txt_ChildTEL1.MaxLength = 15
+        Me.txt_ChildTEL1.MaxLength = 4
         Me.txt_ChildTEL1.Name = "txt_ChildTEL1"
         Me.txt_ChildTEL1.Size = New System.Drawing.Size(40, 23)
         Me.txt_ChildTEL1.TabIndex = 14
@@ -488,7 +488,7 @@ Partial Class ChildInfoAdd
         Me.txt_ChildAge.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_ChildAge.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_ChildAge.Location = New System.Drawing.Point(394, 154)
-        Me.txt_ChildAge.MaxLength = 1
+        Me.txt_ChildAge.MaxLength = 3
         Me.txt_ChildAge.Name = "txt_ChildAge"
         Me.txt_ChildAge.Size = New System.Drawing.Size(48, 23)
         Me.txt_ChildAge.TabIndex = 8
@@ -508,7 +508,7 @@ Partial Class ChildInfoAdd
         Me.txt_BirthMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_BirthMonth.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_BirthMonth.Location = New System.Drawing.Point(240, 154)
-        Me.txt_BirthMonth.MaxLength = 4
+        Me.txt_BirthMonth.MaxLength = 2
         Me.txt_BirthMonth.Name = "txt_BirthMonth"
         Me.txt_BirthMonth.Size = New System.Drawing.Size(44, 23)
         Me.txt_BirthMonth.TabIndex = 6
@@ -539,7 +539,7 @@ Partial Class ChildInfoAdd
         Me.txt_Temperature.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_Temperature.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_Temperature.Location = New System.Drawing.Point(635, 201)
-        Me.txt_Temperature.MaxLength = 2
+        Me.txt_Temperature.MaxLength = 5
         Me.txt_Temperature.Name = "txt_Temperature"
         Me.txt_Temperature.Size = New System.Drawing.Size(87, 23)
         Me.txt_Temperature.TabIndex = 13
@@ -1238,6 +1238,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge9.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge9.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge9.Location = New System.Drawing.Point(261, 523)
+        Me.txt_FamilyAge9.MaxLength = 3
         Me.txt_FamilyAge9.Name = "txt_FamilyAge9"
         Me.txt_FamilyAge9.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge9.TabIndex = 58
@@ -1263,6 +1264,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge8.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge8.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge8.Location = New System.Drawing.Point(261, 466)
+        Me.txt_FamilyAge8.MaxLength = 3
         Me.txt_FamilyAge8.Name = "txt_FamilyAge8"
         Me.txt_FamilyAge8.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge8.TabIndex = 51
@@ -1280,6 +1282,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge7.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge7.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge7.Location = New System.Drawing.Point(261, 409)
+        Me.txt_FamilyAge7.MaxLength = 3
         Me.txt_FamilyAge7.Name = "txt_FamilyAge7"
         Me.txt_FamilyAge7.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge7.TabIndex = 44
@@ -1289,6 +1292,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge6.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge6.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge6.Location = New System.Drawing.Point(261, 355)
+        Me.txt_FamilyAge6.MaxLength = 3
         Me.txt_FamilyAge6.Name = "txt_FamilyAge6"
         Me.txt_FamilyAge6.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge6.TabIndex = 37
@@ -1314,6 +1318,7 @@ Partial Class ChildInfoAdd
         Me.txt_EmergencyTEL2_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_EmergencyTEL2_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_EmergencyTEL2_3.Location = New System.Drawing.Point(634, 625)
+        Me.txt_EmergencyTEL2_3.MaxLength = 4
         Me.txt_EmergencyTEL2_3.Name = "txt_EmergencyTEL2_3"
         Me.txt_EmergencyTEL2_3.Size = New System.Drawing.Size(48, 23)
         Me.txt_EmergencyTEL2_3.TabIndex = 72
@@ -1323,6 +1328,7 @@ Partial Class ChildInfoAdd
         Me.txt_EmergencyTEL1_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_EmergencyTEL1_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_EmergencyTEL1_3.Location = New System.Drawing.Point(634, 598)
+        Me.txt_EmergencyTEL1_3.MaxLength = 4
         Me.txt_EmergencyTEL1_3.Name = "txt_EmergencyTEL1_3"
         Me.txt_EmergencyTEL1_3.Size = New System.Drawing.Size(48, 23)
         Me.txt_EmergencyTEL1_3.TabIndex = 67
@@ -1332,6 +1338,7 @@ Partial Class ChildInfoAdd
         Me.txt_EmergencyTEL2_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_EmergencyTEL2_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_EmergencyTEL2_2.Location = New System.Drawing.Point(570, 625)
+        Me.txt_EmergencyTEL2_2.MaxLength = 4
         Me.txt_EmergencyTEL2_2.Name = "txt_EmergencyTEL2_2"
         Me.txt_EmergencyTEL2_2.Size = New System.Drawing.Size(48, 23)
         Me.txt_EmergencyTEL2_2.TabIndex = 71
@@ -1341,6 +1348,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL9_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL9_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL9_3.Location = New System.Drawing.Point(634, 525)
+        Me.txt_FamilyTEL9_3.MaxLength = 4
         Me.txt_FamilyTEL9_3.Name = "txt_FamilyTEL9_3"
         Me.txt_FamilyTEL9_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL9_3.TabIndex = 62
@@ -1350,6 +1358,7 @@ Partial Class ChildInfoAdd
         Me.txt_EmergencyTEL1_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_EmergencyTEL1_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_EmergencyTEL1_2.Location = New System.Drawing.Point(570, 598)
+        Me.txt_EmergencyTEL1_2.MaxLength = 4
         Me.txt_EmergencyTEL1_2.Name = "txt_EmergencyTEL1_2"
         Me.txt_EmergencyTEL1_2.Size = New System.Drawing.Size(48, 23)
         Me.txt_EmergencyTEL1_2.TabIndex = 66
@@ -1359,6 +1368,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL8_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL8_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL8_3.Location = New System.Drawing.Point(634, 469)
+        Me.txt_FamilyTEL8_3.MaxLength = 4
         Me.txt_FamilyTEL8_3.Name = "txt_FamilyTEL8_3"
         Me.txt_FamilyTEL8_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL8_3.TabIndex = 55
@@ -1368,6 +1378,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL9_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL9_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL9_2.Location = New System.Drawing.Point(570, 525)
+        Me.txt_FamilyTEL9_2.MaxLength = 4
         Me.txt_FamilyTEL9_2.Name = "txt_FamilyTEL9_2"
         Me.txt_FamilyTEL9_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL9_2.TabIndex = 61
@@ -1377,6 +1388,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL7_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL7_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL7_3.Location = New System.Drawing.Point(634, 411)
+        Me.txt_FamilyTEL7_3.MaxLength = 4
         Me.txt_FamilyTEL7_3.Name = "txt_FamilyTEL7_3"
         Me.txt_FamilyTEL7_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL7_3.TabIndex = 48
@@ -1386,6 +1398,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL8_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL8_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL8_2.Location = New System.Drawing.Point(570, 469)
+        Me.txt_FamilyTEL8_2.MaxLength = 4
         Me.txt_FamilyTEL8_2.Name = "txt_FamilyTEL8_2"
         Me.txt_FamilyTEL8_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL8_2.TabIndex = 54
@@ -1395,6 +1408,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL6_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL6_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL6_3.Location = New System.Drawing.Point(633, 356)
+        Me.txt_FamilyTEL6_3.MaxLength = 4
         Me.txt_FamilyTEL6_3.Name = "txt_FamilyTEL6_3"
         Me.txt_FamilyTEL6_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL6_3.TabIndex = 41
@@ -1404,6 +1418,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL7_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL7_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL7_2.Location = New System.Drawing.Point(570, 411)
+        Me.txt_FamilyTEL7_2.MaxLength = 4
         Me.txt_FamilyTEL7_2.Name = "txt_FamilyTEL7_2"
         Me.txt_FamilyTEL7_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL7_2.TabIndex = 47
@@ -1413,6 +1428,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL6_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL6_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL6_2.Location = New System.Drawing.Point(569, 356)
+        Me.txt_FamilyTEL6_2.MaxLength = 4
         Me.txt_FamilyTEL6_2.Name = "txt_FamilyTEL6_2"
         Me.txt_FamilyTEL6_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL6_2.TabIndex = 40
@@ -1422,6 +1438,7 @@ Partial Class ChildInfoAdd
         Me.txt_EmergencyTEL2_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_EmergencyTEL2_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_EmergencyTEL2_1.Location = New System.Drawing.Point(506, 625)
+        Me.txt_EmergencyTEL2_1.MaxLength = 4
         Me.txt_EmergencyTEL2_1.Name = "txt_EmergencyTEL2_1"
         Me.txt_EmergencyTEL2_1.Size = New System.Drawing.Size(48, 23)
         Me.txt_EmergencyTEL2_1.TabIndex = 70
@@ -1431,6 +1448,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL5_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL5_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL5_3.Location = New System.Drawing.Point(633, 300)
+        Me.txt_FamilyTEL5_3.MaxLength = 4
         Me.txt_FamilyTEL5_3.Name = "txt_FamilyTEL5_3"
         Me.txt_FamilyTEL5_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL5_3.TabIndex = 34
@@ -1440,6 +1458,7 @@ Partial Class ChildInfoAdd
         Me.txt_EmergencyTEL1_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_EmergencyTEL1_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_EmergencyTEL1_1.Location = New System.Drawing.Point(506, 598)
+        Me.txt_EmergencyTEL1_1.MaxLength = 4
         Me.txt_EmergencyTEL1_1.Name = "txt_EmergencyTEL1_1"
         Me.txt_EmergencyTEL1_1.Size = New System.Drawing.Size(48, 23)
         Me.txt_EmergencyTEL1_1.TabIndex = 65
@@ -1449,6 +1468,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL5_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL5_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL5_2.Location = New System.Drawing.Point(569, 300)
+        Me.txt_FamilyTEL5_2.MaxLength = 4
         Me.txt_FamilyTEL5_2.Name = "txt_FamilyTEL5_2"
         Me.txt_FamilyTEL5_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL5_2.TabIndex = 33
@@ -1458,6 +1478,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL9_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL9_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL9_1.Location = New System.Drawing.Point(506, 525)
+        Me.txt_FamilyTEL9_1.MaxLength = 4
         Me.txt_FamilyTEL9_1.Name = "txt_FamilyTEL9_1"
         Me.txt_FamilyTEL9_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL9_1.TabIndex = 60
@@ -1467,6 +1488,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL4_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL4_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL4_3.Location = New System.Drawing.Point(634, 242)
+        Me.txt_FamilyTEL4_3.MaxLength = 4
         Me.txt_FamilyTEL4_3.Name = "txt_FamilyTEL4_3"
         Me.txt_FamilyTEL4_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL4_3.TabIndex = 27
@@ -1476,6 +1498,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL8_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL8_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL8_1.Location = New System.Drawing.Point(506, 469)
+        Me.txt_FamilyTEL8_1.MaxLength = 4
         Me.txt_FamilyTEL8_1.Name = "txt_FamilyTEL8_1"
         Me.txt_FamilyTEL8_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL8_1.TabIndex = 53
@@ -1485,6 +1508,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL4_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL4_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL4_2.Location = New System.Drawing.Point(570, 242)
+        Me.txt_FamilyTEL4_2.MaxLength = 4
         Me.txt_FamilyTEL4_2.Name = "txt_FamilyTEL4_2"
         Me.txt_FamilyTEL4_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL4_2.TabIndex = 26
@@ -1494,6 +1518,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL7_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL7_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL7_1.Location = New System.Drawing.Point(506, 411)
+        Me.txt_FamilyTEL7_1.MaxLength = 4
         Me.txt_FamilyTEL7_1.Name = "txt_FamilyTEL7_1"
         Me.txt_FamilyTEL7_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL7_1.TabIndex = 46
@@ -1503,6 +1528,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL3_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL3_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL3_3.Location = New System.Drawing.Point(634, 188)
+        Me.txt_FamilyTEL3_3.MaxLength = 4
         Me.txt_FamilyTEL3_3.Name = "txt_FamilyTEL3_3"
         Me.txt_FamilyTEL3_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL3_3.TabIndex = 20
@@ -1512,6 +1538,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL6_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL6_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL6_1.Location = New System.Drawing.Point(505, 356)
+        Me.txt_FamilyTEL6_1.MaxLength = 4
         Me.txt_FamilyTEL6_1.Name = "txt_FamilyTEL6_1"
         Me.txt_FamilyTEL6_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL6_1.TabIndex = 39
@@ -1521,6 +1548,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL3_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL3_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL3_2.Location = New System.Drawing.Point(570, 188)
+        Me.txt_FamilyTEL3_2.MaxLength = 4
         Me.txt_FamilyTEL3_2.Name = "txt_FamilyTEL3_2"
         Me.txt_FamilyTEL3_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL3_2.TabIndex = 19
@@ -1530,6 +1558,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL5_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL5_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL5_1.Location = New System.Drawing.Point(505, 300)
+        Me.txt_FamilyTEL5_1.MaxLength = 4
         Me.txt_FamilyTEL5_1.Name = "txt_FamilyTEL5_1"
         Me.txt_FamilyTEL5_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL5_1.TabIndex = 32
@@ -1539,6 +1568,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL2_3.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL2_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL2_3.Location = New System.Drawing.Point(634, 131)
+        Me.txt_FamilyTEL2_3.MaxLength = 4
         Me.txt_FamilyTEL2_3.Name = "txt_FamilyTEL2_3"
         Me.txt_FamilyTEL2_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL2_3.TabIndex = 13
@@ -1548,6 +1578,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL4_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL4_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL4_1.Location = New System.Drawing.Point(506, 242)
+        Me.txt_FamilyTEL4_1.MaxLength = 4
         Me.txt_FamilyTEL4_1.Name = "txt_FamilyTEL4_1"
         Me.txt_FamilyTEL4_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL4_1.TabIndex = 25
@@ -1557,6 +1588,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL2_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL2_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL2_2.Location = New System.Drawing.Point(570, 131)
+        Me.txt_FamilyTEL2_2.MaxLength = 4
         Me.txt_FamilyTEL2_2.Name = "txt_FamilyTEL2_2"
         Me.txt_FamilyTEL2_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL2_2.TabIndex = 12
@@ -1566,6 +1598,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL3_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL3_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL3_1.Location = New System.Drawing.Point(506, 188)
+        Me.txt_FamilyTEL3_1.MaxLength = 4
         Me.txt_FamilyTEL3_1.Name = "txt_FamilyTEL3_1"
         Me.txt_FamilyTEL3_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL3_1.TabIndex = 18
@@ -1575,6 +1608,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL1_3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL1_3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL1_3.Location = New System.Drawing.Point(634, 75)
+        Me.txt_FamilyTEL1_3.MaxLength = 4
         Me.txt_FamilyTEL1_3.Name = "txt_FamilyTEL1_3"
         Me.txt_FamilyTEL1_3.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL1_3.TabIndex = 6
@@ -1584,6 +1618,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL2_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL2_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL2_1.Location = New System.Drawing.Point(506, 131)
+        Me.txt_FamilyTEL2_1.MaxLength = 4
         Me.txt_FamilyTEL2_1.Name = "txt_FamilyTEL2_1"
         Me.txt_FamilyTEL2_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL2_1.TabIndex = 11
@@ -1593,6 +1628,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL1_2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL1_2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL1_2.Location = New System.Drawing.Point(570, 75)
+        Me.txt_FamilyTEL1_2.MaxLength = 4
         Me.txt_FamilyTEL1_2.Name = "txt_FamilyTEL1_2"
         Me.txt_FamilyTEL1_2.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL1_2.TabIndex = 5
@@ -1602,6 +1638,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyTEL1_1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyTEL1_1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyTEL1_1.Location = New System.Drawing.Point(506, 75)
+        Me.txt_FamilyTEL1_1.MaxLength = 4
         Me.txt_FamilyTEL1_1.Name = "txt_FamilyTEL1_1"
         Me.txt_FamilyTEL1_1.Size = New System.Drawing.Size(48, 29)
         Me.txt_FamilyTEL1_1.TabIndex = 4
@@ -1611,6 +1648,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge5.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge5.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge5.Location = New System.Drawing.Point(261, 297)
+        Me.txt_FamilyAge5.MaxLength = 3
         Me.txt_FamilyAge5.Name = "txt_FamilyAge5"
         Me.txt_FamilyAge5.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge5.TabIndex = 30
@@ -1620,6 +1658,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge4.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge4.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge4.Location = New System.Drawing.Point(261, 242)
+        Me.txt_FamilyAge4.MaxLength = 3
         Me.txt_FamilyAge4.Name = "txt_FamilyAge4"
         Me.txt_FamilyAge4.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge4.TabIndex = 23
@@ -1629,6 +1668,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge3.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge3.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge3.Location = New System.Drawing.Point(261, 185)
+        Me.txt_FamilyAge3.MaxLength = 3
         Me.txt_FamilyAge3.Name = "txt_FamilyAge3"
         Me.txt_FamilyAge3.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge3.TabIndex = 16
@@ -1638,6 +1678,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge2.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge2.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge2.Location = New System.Drawing.Point(261, 128)
+        Me.txt_FamilyAge2.MaxLength = 3
         Me.txt_FamilyAge2.Name = "txt_FamilyAge2"
         Me.txt_FamilyAge2.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge2.TabIndex = 9
@@ -1647,6 +1688,7 @@ Partial Class ChildInfoAdd
         Me.txt_FamilyAge1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.txt_FamilyAge1.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txt_FamilyAge1.Location = New System.Drawing.Point(261, 73)
+        Me.txt_FamilyAge1.MaxLength = 3
         Me.txt_FamilyAge1.Name = "txt_FamilyAge1"
         Me.txt_FamilyAge1.Size = New System.Drawing.Size(48, 34)
         Me.txt_FamilyAge1.TabIndex = 2
