@@ -1,6 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
 
-Public Class zidouhyou
+Public Class ChildInfoAdd
 
     Private encsjis As System.Text.Encoding
 
