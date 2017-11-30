@@ -104,6 +104,94 @@ Public Class ChildInfoAdd
         EmInput(txt_FamilyName4)
     End Sub
 
+    Private Sub txt_RelationFamily4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily4.TextChanged
+        EmInput(txt_RelationFamily4)
+    End Sub
+
+    Private Sub txt_WorkPlace4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace4.TextChanged
+        EmInput(txt_WorkPlace4)
+    End Sub
+
+    Private Sub txt_FamilyName5_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName5.TextChanged
+        EmInput(txt_FamilyName5)
+    End Sub
+
+    Private Sub txt_RelationFamily5_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily5.TextChanged
+        EmInput(txt_RelationFamily5)
+    End Sub
+
+    Private Sub txt_WorkPlace5_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace5.TextChanged
+        EmInput(txt_WorkPlace5)
+    End Sub
+
+    Private Sub txt_FamilyName6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName6.TextChanged
+        EmInput(txt_FamilyName6)
+    End Sub
+
+    Private Sub txt_RelationFamily6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily6.TextChanged
+        EmInput(txt_RelationFamily6)
+    End Sub
+
+    Private Sub txt_WorkPlace6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace6.TextChanged
+        EmInput(txt_WorkPlace6)
+    End Sub
+
+    Private Sub txt_FamilyName7_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName7.TextChanged
+        EmInput(txt_FamilyName7)
+    End Sub
+
+    Private Sub txt_RelationFamily7_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily7.TextChanged
+        EmInput(txt_RelationFamily7)
+    End Sub
+
+    Private Sub txt_WorkPlace7_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace7.TextChanged
+        EmInput(txt_WorkPlace7)
+    End Sub
+
+    Private Sub txt_FamilyName8_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName8.TextChanged
+        EmInput(txt_FamilyName8)
+    End Sub
+
+    Private Sub txt_RelationFamily8_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily8.TextChanged
+        EmInput(txt_RelationFamily8)
+    End Sub
+
+    Private Sub txt_WorkPlace8_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace8.TextChanged
+        EmInput(txt_WorkPlace8)
+    End Sub
+
+    Private Sub txt_FamilyName9_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName9.TextChanged
+        EmInput(txt_FamilyName9)
+    End Sub
+
+    Private Sub txt_RelationFamily9_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily9.TextChanged
+        EmInput(txt_RelationFamily9)
+    End Sub
+
+    Private Sub txt_WorkPlace9_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace9.TextChanged
+        EmInput(txt_WorkPlace9)
+    End Sub
+
+    Private Sub txt_EmergencyName1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_EmergencyName1.TextChanged
+        EmInput(txt_EmergencyName1)
+    End Sub
+
+    Private Sub txt_EmergencyName2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_EmergencyName2.TextChanged
+        EmInput(txt_EmergencyName2)
+    End Sub
+
+    Private Sub txt_RelationEmergency1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationEmergency1.TextChanged
+        EmInput(txt_RelationEmergency1)
+    End Sub
+
+    Private Sub txt_RelationEmergency2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationEmergency2.TextChanged
+        EmInput(txt_RelationEmergency2)
+    End Sub
+
+    Private Sub rtb_CommutingMethod_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rtb_CommutingMethod.TextChanged
+        EmInput(rtb_CommutingMethod)
+    End Sub
+
     Private Sub txt_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthYear.KeyPress
         NumInput(e)
     End Sub
