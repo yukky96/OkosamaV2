@@ -4,6 +4,7 @@ Public Class ChildInfoAdd
 
     Private encsjis As System.Text.Encoding
 
+    ' 全角文字しか入力できないように制限する関数。
     Private Sub EmInput(ByVal txtcontrol As Object)
         Dim z As String = String.Empty
         For Each s As String In txtcontrol.Text
@@ -32,6 +33,7 @@ Public Class ChildInfoAdd
         End While
     End Sub
 
+    ' 数字しか入力できないように制限する関数。
     Private Sub NumInput(ByRef e As Object)
         If (e.KeyChar < "0"c Or e.KeyChar > "9"c) And e.KeyChar <> vbBack Then
             e.Handled = True
@@ -48,42 +50,6 @@ Public Class ChildInfoAdd
 
     Private Sub txt_NickName_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_NickName.TextChanged
         EmInput(txt_NickName)
-    End Sub
-
-    Private Sub txt_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthYear.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_BirthMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthMonth.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_BirthDay_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthDay.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_ChildAge_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildAge.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_ChildAgeMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildAgeMonth.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_PostalCode1_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_PostalCode1.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_PostalCode2_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_PostalCode2.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_Tempereture_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_Temperature.KeyPress
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_ChildTEL1_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildTEL1.KeyPress
-        NumInput(e)
     End Sub
 
     Private Sub txt_ChildNameKana_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -134,6 +100,46 @@ Public Class ChildInfoAdd
         EmInput(txt_WorkPlace3)
     End Sub
 
+    Private Sub txt_FamilyName4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName4.TextChanged
+        EmInput(txt_FamilyName4)
+    End Sub
+
+    Private Sub txt_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthYear.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_BirthMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthMonth.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_BirthDay_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthDay.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_ChildAge_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildAge.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_ChildAgeMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildAgeMonth.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_PostalCode1_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_PostalCode1.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_PostalCode2_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_PostalCode2.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_Tempereture_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_Temperature.KeyPress
+        NumInput(e)
+    End Sub
+
+    Private Sub txt_ChildTEL1_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildTEL1.KeyPress
+        NumInput(e)
+    End Sub
+
     Private Sub txt_ChildTEL2_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildTEL2.KeyPress
         NumInput(e)
     End Sub
@@ -160,10 +166,6 @@ Public Class ChildInfoAdd
 
     Private Sub txt_FamilyTEL1_1_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_FamilyTEL1_1.KeyPress
         NumInput(e)
-    End Sub
-
-    Private Sub txt_FamilyName4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName4.TextChanged
-        EmInput(txt_FamilyName4)
     End Sub
 
     Private Sub txt_FamilyTEL1_2_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_FamilyTEL1_2.KeyPress
