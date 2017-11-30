@@ -44,6 +44,10 @@ Public Class ChildInfoAdd
         encsjis = System.Text.Encoding.GetEncoding("Shift_JIS")
     End Sub
 
+    Private Sub cmb_Author_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmb_Author.TextChanged
+        EmInput(cmb_Author)
+    End Sub
+
     Private Sub txt_ChildName_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_ChildName.TextChanged
         EmInput(txt_ChildName)
     End Sub

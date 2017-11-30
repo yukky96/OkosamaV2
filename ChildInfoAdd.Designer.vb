@@ -191,7 +191,7 @@ Partial Class ChildInfoAdd
         Me.chb_IllnessMeasles = New System.Windows.Forms.CheckBox()
         Me.rdb_AllergyWithout = New System.Windows.Forms.RadioButton()
         Me.rdb_AllergyExist = New System.Windows.Forms.RadioButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmb_Author = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -1919,14 +1919,14 @@ Partial Class ChildInfoAdd
         Me.rdb_AllergyExist.TabStop = True
         Me.rdb_AllergyExist.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'cmb_Author
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(74, 100)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cmb_Author.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmb_Author.FormattingEnabled = True
+        Me.cmb_Author.Location = New System.Drawing.Point(74, 100)
+        Me.cmb_Author.Name = "cmb_Author"
+        Me.cmb_Author.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_Author.TabIndex = 0
         '
         'ChildInfoAdd
         '
@@ -1934,7 +1934,7 @@ Partial Class ChildInfoAdd
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(818, 566)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmb_Author)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Panel1)
@@ -2061,7 +2061,7 @@ Partial Class ChildInfoAdd
     Friend WithEvents txt_RelationFamily3 As System.Windows.Forms.TextBox
     Friend WithEvents txt_RelationFamily2 As System.Windows.Forms.TextBox
     Friend WithEvents txt_RelationFamily1 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmb_Author As System.Windows.Forms.ComboBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents rdb_woman As System.Windows.Forms.RadioButton
     Friend WithEvents rdb_man As System.Windows.Forms.RadioButton
