@@ -447,4 +447,43 @@ Public Class ChildInfoAdd
     Private Sub txt_CommutingMin_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_CommutingMin.KeyPress
         NumInput(e)
     End Sub
+
+    Private Sub txt_BirthMonth_LostFocus(sender As Object, e As EventArgs) Handles txt_BirthMonth.LostFocus
+        If IsNumeric(txt_BirthMonth.Text) Then
+            'Parse関数でInteger型に変換して格納。
+            Dim month As Integer = Integer.Parse(txt_BirthMonth.Text)
+
+            If month < 1 Or month > 12 Then
+                MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
+                txt_BirthMonth.Text = String.Empty
+                txt_BirthMonth.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Sub txt_BirthDay_LostFocus(sender As Object, e As EventArgs) Handles txt_BirthDay.LostFocus
+        If IsNumeric(txt_BirthDay.Text) Then
+            'Parse関数でInteger型に変換して格納。
+            Dim day As Integer = Integer.Parse(txt_BirthDay.Text)
+
+            If day < 1 Or day > 31 Then
+                MsgBox("1～31の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
+                txt_BirthDay.Text = String.Empty
+                txt_BirthDay.Focus()
+            End If
+        End If
+    End Sub
+
+    Private Sub txt_ChildAge_LostFocus(sender As Object, e As EventArgs) Handles txt_ChildAge.LostFocus
+        If IsNumeric(txt_ChildAge.Text) Then
+            'Parse関数でInteger型に変換して格納。
+            Dim age As Integer = Integer.Parse(txt_ChildAge.Text)
+
+            If age < 1 Or age > 31 Then
+                MsgBox("0～の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
+                txt_ChildAge.Text = String.Empty
+                txt_ChildAge.Focus()
+            End If
+        End If
+    End Sub
 End Class
