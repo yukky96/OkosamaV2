@@ -192,6 +192,26 @@ Public Class ChildInfoAdd
         EmInput(rtb_CommutingMethod)
     End Sub
 
+    Private Sub txt_AllergyDetails_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_AllergyDetails.TextChanged
+        EmInput(txt_AllergyDetails)
+    End Sub
+
+    Private Sub txt_IllnessEtc_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_IllnessEtc.TextChanged
+        EmInput(txt_IllnessEtc)
+    End Sub
+
+    Private Sub txt_Operation_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_Operation.TextChanged
+        EmInput(txt_Operation)
+    End Sub
+
+    Private Sub txt_SusceptibleIllness_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_SusceptibleIllness.TextChanged
+        EmInput(txt_SusceptibleIllness)
+    End Sub
+
+    Private Sub rtb_AnxietyAndAttention_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rtb_AnxietyAndAttention.TextChanged
+        EmInput(rtb_AnxietyAndAttention)
+    End Sub
+
     Private Sub txt_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthYear.KeyPress
         NumInput(e)
     End Sub
