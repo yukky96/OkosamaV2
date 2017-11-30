@@ -56,51 +56,51 @@ Public Class ChildInfoAdd
         EmInput(txt_NickName)
     End Sub
 
-    Private Sub txt_ChildNameKana_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_ChildNameKana_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_ChildNameKana.TextChanged
         EmInput(txt_ChildNameKana)
     End Sub
 
-    Private Sub txt_Address_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_Address_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_Address.TextChanged
         EmInput(txt_Address)
     End Sub
 
-    Private Sub txt_DoctorName_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_DoctorName_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_DoctorName.TextChanged
         EmInput(txt_DoctorName)
     End Sub
 
-    Private Sub txt_FamilyName1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_FamilyName1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName1.TextChanged
         EmInput(txt_FamilyName1)
     End Sub
 
-    Private Sub txt_RelationFamily1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_RelationFamily1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily1.TextChanged
         EmInput(txt_RelationFamily1)
     End Sub
 
-    Private Sub txt_WorkPlace1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_WorkPlace1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace1.TextChanged
         EmInput(txt_WorkPlace1)
     End Sub
 
-    Private Sub txt_FamilyName2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_FamilyName2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName2.TextChanged
         EmInput(txt_FamilyName2)
     End Sub
 
-    Private Sub txt_RelationFamily2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_RelationFamily2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily2.TextChanged
         EmInput(txt_RelationFamily2)
     End Sub
 
-    Private Sub txt_WorkPlace2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_WorkPlace2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace2.TextChanged
         EmInput(txt_WorkPlace2)
     End Sub
 
-    Private Sub txt_FamilyName3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_FamilyName3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName3.TextChanged
         EmInput(txt_FamilyName3)
     End Sub
 
-    Private Sub txt_RelationFamily3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_RelationFamily3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily3.TextChanged
         EmInput(txt_RelationFamily3)
     End Sub
 
-    Private Sub txt_WorkPlace3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
+    Private Sub txt_WorkPlace3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace3.TextChanged
         EmInput(txt_WorkPlace3)
     End Sub
 
