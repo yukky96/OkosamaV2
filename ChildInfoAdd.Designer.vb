@@ -49,11 +49,6 @@ Partial Class ChildInfoAdd
         Me.txt_PostalCode2 = New System.Windows.Forms.TextBox()
         Me.txt_PostalCode1 = New System.Windows.Forms.TextBox()
         Me.txt_ChildTEL1 = New System.Windows.Forms.TextBox()
-        Me.txt_ChildAgeMonth = New System.Windows.Forms.TextBox()
-        Me.txt_ChildAge = New System.Windows.Forms.TextBox()
-        Me.txt_BirthDay = New System.Windows.Forms.TextBox()
-        Me.txt_BirthMonth = New System.Windows.Forms.TextBox()
-        Me.txt_BirthYear = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_Temperature = New System.Windows.Forms.TextBox()
         Me.txt_DoctorName = New System.Windows.Forms.TextBox()
@@ -192,6 +187,11 @@ Partial Class ChildInfoAdd
         Me.rdb_AllergyWithout = New System.Windows.Forms.RadioButton()
         Me.rdb_AllergyExist = New System.Windows.Forms.RadioButton()
         Me.cmb_Author = New System.Windows.Forms.ComboBox()
+        Me.cmb_BirthMonth = New System.Windows.Forms.ComboBox()
+        Me.cmb_BirthDay = New System.Windows.Forms.ComboBox()
+        Me.cmb_BirthYear = New System.Windows.Forms.ComboBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -327,6 +327,11 @@ Partial Class ChildInfoAdd
         '
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel2.Controls.Add(Me.Label37)
+        Me.Panel2.Controls.Add(Me.Label36)
+        Me.Panel2.Controls.Add(Me.cmb_BirthDay)
+        Me.Panel2.Controls.Add(Me.cmb_BirthYear)
+        Me.Panel2.Controls.Add(Me.cmb_BirthMonth)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.rdb_woman)
         Me.Panel2.Controls.Add(Me.rdb_man)
@@ -338,11 +343,6 @@ Partial Class ChildInfoAdd
         Me.Panel2.Controls.Add(Me.txt_PostalCode2)
         Me.Panel2.Controls.Add(Me.txt_PostalCode1)
         Me.Panel2.Controls.Add(Me.txt_ChildTEL1)
-        Me.Panel2.Controls.Add(Me.txt_ChildAgeMonth)
-        Me.Panel2.Controls.Add(Me.txt_ChildAge)
-        Me.Panel2.Controls.Add(Me.txt_BirthDay)
-        Me.Panel2.Controls.Add(Me.txt_BirthMonth)
-        Me.Panel2.Controls.Add(Me.txt_BirthYear)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.txt_Temperature)
         Me.Panel2.Controls.Add(Me.txt_DoctorName)
@@ -472,56 +472,6 @@ Partial Class ChildInfoAdd
         Me.txt_ChildTEL1.Name = "txt_ChildTEL1"
         Me.txt_ChildTEL1.Size = New System.Drawing.Size(40, 23)
         Me.txt_ChildTEL1.TabIndex = 14
-        '
-        'txt_ChildAgeMonth
-        '
-        Me.txt_ChildAgeMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.txt_ChildAgeMonth.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.txt_ChildAgeMonth.Location = New System.Drawing.Point(464, 154)
-        Me.txt_ChildAgeMonth.MaxLength = 2
-        Me.txt_ChildAgeMonth.Name = "txt_ChildAgeMonth"
-        Me.txt_ChildAgeMonth.Size = New System.Drawing.Size(48, 23)
-        Me.txt_ChildAgeMonth.TabIndex = 9
-        '
-        'txt_ChildAge
-        '
-        Me.txt_ChildAge.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.txt_ChildAge.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.txt_ChildAge.Location = New System.Drawing.Point(394, 154)
-        Me.txt_ChildAge.MaxLength = 3
-        Me.txt_ChildAge.Name = "txt_ChildAge"
-        Me.txt_ChildAge.Size = New System.Drawing.Size(48, 23)
-        Me.txt_ChildAge.TabIndex = 8
-        '
-        'txt_BirthDay
-        '
-        Me.txt_BirthDay.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.txt_BirthDay.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.txt_BirthDay.Location = New System.Drawing.Point(308, 154)
-        Me.txt_BirthDay.MaxLength = 2
-        Me.txt_BirthDay.Name = "txt_BirthDay"
-        Me.txt_BirthDay.Size = New System.Drawing.Size(48, 23)
-        Me.txt_BirthDay.TabIndex = 7
-        '
-        'txt_BirthMonth
-        '
-        Me.txt_BirthMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.txt_BirthMonth.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.txt_BirthMonth.Location = New System.Drawing.Point(240, 154)
-        Me.txt_BirthMonth.MaxLength = 2
-        Me.txt_BirthMonth.Name = "txt_BirthMonth"
-        Me.txt_BirthMonth.Size = New System.Drawing.Size(44, 23)
-        Me.txt_BirthMonth.TabIndex = 6
-        '
-        'txt_BirthYear
-        '
-        Me.txt_BirthYear.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.txt_BirthYear.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.txt_BirthYear.Location = New System.Drawing.Point(172, 154)
-        Me.txt_BirthYear.MaxLength = 4
-        Me.txt_BirthYear.Name = "txt_BirthYear"
-        Me.txt_BirthYear.Size = New System.Drawing.Size(44, 23)
-        Me.txt_BirthYear.TabIndex = 5
         '
         'Label3
         '
@@ -1928,6 +1878,54 @@ Partial Class ChildInfoAdd
         Me.cmb_Author.Size = New System.Drawing.Size(121, 21)
         Me.cmb_Author.TabIndex = 0
         '
+        'cmb_BirthMonth
+        '
+        Me.cmb_BirthMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmb_BirthMonth.FormattingEnabled = True
+        Me.cmb_BirthMonth.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
+        Me.cmb_BirthMonth.Location = New System.Drawing.Point(245, 154)
+        Me.cmb_BirthMonth.Name = "cmb_BirthMonth"
+        Me.cmb_BirthMonth.Size = New System.Drawing.Size(40, 24)
+        Me.cmb_BirthMonth.TabIndex = 44
+        '
+        'cmb_BirthDay
+        '
+        Me.cmb_BirthDay.Enabled = False
+        Me.cmb_BirthDay.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmb_BirthDay.FormattingEnabled = True
+        Me.cmb_BirthDay.Location = New System.Drawing.Point(313, 154)
+        Me.cmb_BirthDay.Name = "cmb_BirthDay"
+        Me.cmb_BirthDay.Size = New System.Drawing.Size(40, 24)
+        Me.cmb_BirthDay.TabIndex = 44
+        '
+        'cmb_BirthYear
+        '
+        Me.cmb_BirthYear.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmb_BirthYear.FormattingEnabled = True
+        Me.cmb_BirthYear.Items.AddRange(New Object() {"2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050", "2051", "2052", "2053", "2054", "2055", "2056", "2057", "2058", "2059", "2060", "2061", "2062", "2063", "2064", "2065", "2066", "2067", "2068", "2069", "2070", "2071", "2072", "2073", "2074", "2075", "2076", "2077", "2078", "2079", "2080", "2081", "2082", "2083", "2084", "2085", "2086", "2087", "2088", "2089", "2090", "2091", "2092", "2093", "2094", "2095", "2096", "2097", "2098", "2099", "2100"})
+        Me.cmb_BirthYear.Location = New System.Drawing.Point(158, 154)
+        Me.cmb_BirthYear.Name = "cmb_BirthYear"
+        Me.cmb_BirthYear.Size = New System.Drawing.Size(54, 24)
+        Me.cmb_BirthYear.TabIndex = 44
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(395, 159)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(44, 12)
+        Me.Label36.TabIndex = 45
+        Me.Label36.Text = "Label36"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(462, 159)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(44, 12)
+        Me.Label37.TabIndex = 46
+        Me.Label37.Text = "Label37"
+        '
         'ChildInfoAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -1983,10 +1981,6 @@ Partial Class ChildInfoAdd
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents txt_ChildTEL1 As System.Windows.Forms.TextBox
-    Friend WithEvents txt_ChildAgeMonth As System.Windows.Forms.TextBox
-    Friend WithEvents txt_ChildAge As System.Windows.Forms.TextBox
-    Friend WithEvents txt_BirthDay As System.Windows.Forms.TextBox
-    Friend WithEvents txt_BirthYear As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txt_Temperature As System.Windows.Forms.TextBox
     Friend WithEvents txt_DoctorName As System.Windows.Forms.TextBox
@@ -2065,7 +2059,6 @@ Partial Class ChildInfoAdd
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents rdb_woman As System.Windows.Forms.RadioButton
     Friend WithEvents rdb_man As System.Windows.Forms.RadioButton
-    Friend WithEvents txt_BirthMonth As System.Windows.Forms.TextBox
     Friend WithEvents txt_ChildName As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
@@ -2134,4 +2127,9 @@ Partial Class ChildInfoAdd
     Friend WithEvents txt_FamilyTEL1_3 As System.Windows.Forms.TextBox
     Friend WithEvents txt_FamilyTEL2_1 As System.Windows.Forms.TextBox
     Friend WithEvents txt_FamilyTEL1_2 As System.Windows.Forms.TextBox
+    Friend WithEvents cmb_BirthDay As System.Windows.Forms.ComboBox
+    Friend WithEvents cmb_BirthMonth As System.Windows.Forms.ComboBox
+    Friend WithEvents cmb_BirthYear As System.Windows.Forms.ComboBox
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents Label36 As System.Windows.Forms.Label
 End Class

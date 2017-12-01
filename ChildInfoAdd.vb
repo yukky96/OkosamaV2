@@ -42,6 +42,8 @@ Public Class ChildInfoAdd
 
     Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         encsjis = System.Text.Encoding.GetEncoding("Shift_JIS")
+
+        cmb_BirthYear.Text = Format(Now, "yyyy")
     End Sub
 
     Private Sub cmb_Author_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmb_Author.TextChanged
@@ -216,23 +218,23 @@ Public Class ChildInfoAdd
         EmInput(rtb_AnxietyAndAttention)
     End Sub
 
-    Private Sub txt_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthYear.KeyPress
+    Private Sub txt_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
         NumInput(e)
     End Sub
 
-    Private Sub txt_BirthMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthMonth.KeyPress
+    Private Sub txt_BirthMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
         NumInput(e)
     End Sub
 
-    Private Sub txt_BirthDay_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_BirthDay.KeyPress
+    Private Sub txt_BirthDay_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
         NumInput(e)
     End Sub
 
-    Private Sub txt_ChildAge_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildAge.KeyPress
+    Private Sub txt_ChildAge_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
         NumInput(e)
     End Sub
 
-    Private Sub txt_ChildAgeMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_ChildAgeMonth.KeyPress
+    Private Sub txt_ChildAgeMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
         NumInput(e)
     End Sub
 
@@ -448,41 +450,34 @@ Public Class ChildInfoAdd
         NumInput(e)
     End Sub
 
-    Private Sub txt_BirthMonth_LostFocus(sender As Object, e As EventArgs) Handles txt_BirthMonth.LostFocus
-        If IsNumeric(txt_BirthMonth.Text) Then
+    Private Sub cmb_BirthMonth_LostFocus(sender As Object, e As EventArgs)
+        If IsNumeric(cmb_BirthMonth.Text) Then
             'Parse関数でInteger型に変換して格納。
-            Dim month As Integer = Integer.Parse(txt_BirthMonth.Text)
+            Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
 
             If month < 1 Or month > 12 Then
                 MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
-                txt_BirthMonth.Text = String.Empty
-                txt_BirthMonth.Focus()
+                cmb_BirthMonth.Text = String.Empty
+                cmb_BirthMonth.Focus()
+
+                ' 選択された
+                'Dim dt As Date = #2/28/2017#
+                'dt.Month = '選択された月 +1
+                'dt.Day -= 1
+
             End If
         End If
     End Sub
 
-    Private Sub txt_BirthDay_LostFocus(sender As Object, e As EventArgs) Handles txt_BirthDay.LostFocus
-        If IsNumeric(txt_BirthDay.Text) Then
+    Private Sub cmb_BirthDay_LostFocus(sender As Object, e As EventArgs)
+        If IsNumeric(cmb_BirthDay.Text) Then
             'Parse関数でInteger型に変換して格納。
-            Dim day As Integer = Integer.Parse(txt_BirthDay.Text)
+            Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
 
             If day < 1 Or day > 31 Then
                 MsgBox("1～31の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
-                txt_BirthDay.Text = String.Empty
-                txt_BirthDay.Focus()
-            End If
-        End If
-    End Sub
-
-    Private Sub txt_ChildAge_LostFocus(sender As Object, e As EventArgs) Handles txt_ChildAge.LostFocus
-        If IsNumeric(txt_ChildAge.Text) Then
-            'Parse関数でInteger型に変換して格納。
-            Dim age As Integer = Integer.Parse(txt_ChildAge.Text)
-
-            If age < 1 Or age > 31 Then
-                MsgBox("0～の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
-                txt_ChildAge.Text = String.Empty
-                txt_ChildAge.Focus()
+                cmb_BirthDay.Text = String.Empty
+                cmb_BirthDay.Focus()
             End If
         End If
     End Sub
