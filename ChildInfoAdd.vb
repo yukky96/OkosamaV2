@@ -455,6 +455,10 @@ Public Class ChildInfoAdd
             'Parse関数でInteger型に変換して格納。
             Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
 
+            If cmb_BirthYear.Text <> String.Empty Or cmb_BirthMonth.Text <> String.Empty Then
+                cmb_BirthDay.Enabled = True
+            End If
+
             If month < 1 Or month > 12 Then
                 MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
                 cmb_BirthMonth.Text = String.Empty
@@ -479,6 +483,12 @@ Public Class ChildInfoAdd
                 cmb_BirthDay.Text = String.Empty
                 cmb_BirthDay.Focus()
             End If
+        End If
+    End Sub
+
+    Private Sub cmb_BirthYear_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthYear.LostFocus
+        If cmb_BirthYear.Text <> String.Empty Or cmb_BirthMonth.Text <> String.Empty Then
+            cmb_BirthDay.Enabled = True
         End If
     End Sub
 End Class
