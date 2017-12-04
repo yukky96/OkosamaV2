@@ -38,6 +38,11 @@ Partial Class ChildInfoAdd
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.cmb_BirthDay = New System.Windows.Forms.ComboBox()
+        Me.cmb_BirthYear = New System.Windows.Forms.ComboBox()
+        Me.cmb_BirthMonth = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.rdb_woman = New System.Windows.Forms.RadioButton()
         Me.rdb_man = New System.Windows.Forms.RadioButton()
@@ -187,11 +192,6 @@ Partial Class ChildInfoAdd
         Me.rdb_AllergyWithout = New System.Windows.Forms.RadioButton()
         Me.rdb_AllergyExist = New System.Windows.Forms.RadioButton()
         Me.cmb_Author = New System.Windows.Forms.ComboBox()
-        Me.cmb_BirthMonth = New System.Windows.Forms.ComboBox()
-        Me.cmb_BirthDay = New System.Windows.Forms.ComboBox()
-        Me.cmb_BirthYear = New System.Windows.Forms.ComboBox()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -309,7 +309,7 @@ Partial Class ChildInfoAdd
         Me.TabControl1.Location = New System.Drawing.Point(12, 139)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(793, 427)
+        Me.TabControl1.Size = New System.Drawing.Size(793, 500)
         Me.TabControl1.TabIndex = 2
         '
         'TabPage1
@@ -318,7 +318,7 @@ Partial Class ChildInfoAdd
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(785, 401)
+        Me.TabPage1.Size = New System.Drawing.Size(785, 474)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "お子様"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -363,6 +363,60 @@ Partial Class ChildInfoAdd
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(778, 392)
         Me.Panel2.TabIndex = 0
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(462, 159)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(44, 12)
+        Me.Label37.TabIndex = 46
+        Me.Label37.Text = "Label37"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(395, 159)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(44, 12)
+        Me.Label36.TabIndex = 45
+        Me.Label36.Text = "Label36"
+        '
+        'cmb_BirthDay
+        '
+        Me.cmb_BirthDay.Enabled = False
+        Me.cmb_BirthDay.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmb_BirthDay.FormattingEnabled = True
+        Me.cmb_BirthDay.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.cmb_BirthDay.Location = New System.Drawing.Point(313, 154)
+        Me.cmb_BirthDay.MaxLength = 2
+        Me.cmb_BirthDay.Name = "cmb_BirthDay"
+        Me.cmb_BirthDay.Size = New System.Drawing.Size(40, 24)
+        Me.cmb_BirthDay.TabIndex = 44
+        '
+        'cmb_BirthYear
+        '
+        Me.cmb_BirthYear.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmb_BirthYear.FormattingEnabled = True
+        Me.cmb_BirthYear.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.cmb_BirthYear.Items.AddRange(New Object() {"1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050", "2051", "2052", "2053", "2054", "2055", "2056", "2057", "2058", "2059", "2060", "2061", "2062", "2063", "2064", "2065", "2066", "2067", "2068", "2069", "2070", "2071", "2072", "2073", "2074", "2075", "2076", "2077", "2078", "2079", "2080", "2081", "2082", "2083", "2084", "2085", "2086", "2087", "2088", "2089", "2090", "2091", "2092", "2093", "2094", "2095", "2096", "2097", "2098", "2099", "2100", "2101", "2102", "2103", "2104", "2105", "2106", "2107", "2108", "2109", "2110", "2111", "2112", "2113", "2114", "2115", "2116", "2117", "2118", "2119", "2120", "2121", "2122", "2123", "2124", "2125", "2126", "2127", "2128", "2129", "2130", "2131", "2132", "2133", "2134", "2135", "2136", "2137", "2138", "2139", "2140", "2141", "2142", "2143", "2144", "2145", "2146", "2147", "2148", "2149", "2150", "2151", "2152", "2153", "2154", "2155", "2156", "2157", "2158", "2159", "2160", "2161", "2162", "2163", "2164", "2165", "2166", "2167", "2168", "2169", "2170", "2171", "2172", "2173", "2174", "2175", "2176", "2177", "2178", "2179", "2180", "2181", "2182", "2183", "2184", "2185", "2186", "2187", "2188", "2189", "2190", "2191", "2192", "2193", "2194", "2195", "2196", "2197", "2198", "2199", "2200"})
+        Me.cmb_BirthYear.Location = New System.Drawing.Point(158, 154)
+        Me.cmb_BirthYear.MaxLength = 4
+        Me.cmb_BirthYear.Name = "cmb_BirthYear"
+        Me.cmb_BirthYear.Size = New System.Drawing.Size(54, 24)
+        Me.cmb_BirthYear.TabIndex = 44
+        '
+        'cmb_BirthMonth
+        '
+        Me.cmb_BirthMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.cmb_BirthMonth.FormattingEnabled = True
+        Me.cmb_BirthMonth.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.cmb_BirthMonth.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
+        Me.cmb_BirthMonth.Location = New System.Drawing.Point(245, 154)
+        Me.cmb_BirthMonth.MaxLength = 2
+        Me.cmb_BirthMonth.Name = "cmb_BirthMonth"
+        Me.cmb_BirthMonth.Size = New System.Drawing.Size(40, 24)
+        Me.cmb_BirthMonth.TabIndex = 44
         '
         'PictureBox1
         '
@@ -636,7 +690,7 @@ Partial Class ChildInfoAdd
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(785, 401)
+        Me.TabPage2.Size = New System.Drawing.Size(785, 474)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "家族構成"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1878,60 +1932,12 @@ Partial Class ChildInfoAdd
         Me.cmb_Author.Size = New System.Drawing.Size(121, 21)
         Me.cmb_Author.TabIndex = 0
         '
-        'cmb_BirthMonth
-        '
-        Me.cmb_BirthMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmb_BirthMonth.FormattingEnabled = True
-        Me.cmb_BirthMonth.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"})
-        Me.cmb_BirthMonth.Location = New System.Drawing.Point(245, 154)
-        Me.cmb_BirthMonth.Name = "cmb_BirthMonth"
-        Me.cmb_BirthMonth.Size = New System.Drawing.Size(40, 24)
-        Me.cmb_BirthMonth.TabIndex = 44
-        '
-        'cmb_BirthDay
-        '
-        Me.cmb_BirthDay.Enabled = False
-        Me.cmb_BirthDay.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmb_BirthDay.FormattingEnabled = True
-        Me.cmb_BirthDay.Location = New System.Drawing.Point(313, 154)
-        Me.cmb_BirthDay.Name = "cmb_BirthDay"
-        Me.cmb_BirthDay.Size = New System.Drawing.Size(40, 24)
-        Me.cmb_BirthDay.TabIndex = 44
-        '
-        'cmb_BirthYear
-        '
-        Me.cmb_BirthYear.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.cmb_BirthYear.FormattingEnabled = True
-        Me.cmb_BirthYear.Items.AddRange(New Object() {"2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031", "2032", "2033", "2034", "2035", "2036", "2037", "2038", "2039", "2040", "2041", "2042", "2043", "2044", "2045", "2046", "2047", "2048", "2049", "2050", "2051", "2052", "2053", "2054", "2055", "2056", "2057", "2058", "2059", "2060", "2061", "2062", "2063", "2064", "2065", "2066", "2067", "2068", "2069", "2070", "2071", "2072", "2073", "2074", "2075", "2076", "2077", "2078", "2079", "2080", "2081", "2082", "2083", "2084", "2085", "2086", "2087", "2088", "2089", "2090", "2091", "2092", "2093", "2094", "2095", "2096", "2097", "2098", "2099", "2100"})
-        Me.cmb_BirthYear.Location = New System.Drawing.Point(158, 154)
-        Me.cmb_BirthYear.Name = "cmb_BirthYear"
-        Me.cmb_BirthYear.Size = New System.Drawing.Size(54, 24)
-        Me.cmb_BirthYear.TabIndex = 44
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(395, 159)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(44, 12)
-        Me.Label36.TabIndex = 45
-        Me.Label36.Text = "Label36"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(462, 159)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(44, 12)
-        Me.Label37.TabIndex = 46
-        Me.Label37.Text = "Label37"
-        '
         'ChildInfoAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(818, 566)
+        Me.ClientSize = New System.Drawing.Size(818, 649)
         Me.Controls.Add(Me.cmb_Author)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -1942,6 +1948,7 @@ Partial Class ChildInfoAdd
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.Name = "ChildInfoAdd"
         Me.Text = "児童票"
         Me.Panel1.ResumeLayout(False)
