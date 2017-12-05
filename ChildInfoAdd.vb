@@ -5,32 +5,16 @@ Public Class ChildInfoAdd
     Private encsjis As System.Text.Encoding
 
     ' 全角文字しか入力できないように制限する関数。
-    Private Sub EmInput(ByVal txtcontrol As Object)
-        Dim z As String = String.Empty
-        For Each s As String In txtcontrol.Text
-            If encsjis.GetBytes(s).Length = 2 Then
-                z = z & s
-            End If
-        Next
-        txtcontrol.Text = z
+    Private Sub EmInput(ByVal Str As Object)
+        Static Encode_JIS As System.Text.Encoding = System.Text.Encoding.GetEncoding("Shift_JIS")
+        Dim Str_Count As Integer = Str.Text.Length
+        Dim ByteCount = Encode_JIS.GetByteCount(Str.Text)
 
-        ' 見つけたい文字のパターンを全角の数字・全角の英大文字・全角の英小文字を指定
-        Dim re As New Regex("(?<moji>[０-９Ａ-Ｚａ-ｚ])")
-
-        ' テキストボックス内の文字でパターンに合う文字を取得
-        Dim m As Match = re.Match(txtcontrol.Text)
-
-        ' 見つかった文字を順に取得
-        While m.Success
-
-            ' テキストボックス内の文字を置換
-            ' 置換前の文字は取得した文字
-            ' 置換後の文字は置換前の文字を半角に変換したもの
-            txtcontrol.Text = txtcontrol.Text.Replace(m.Result("${moji}"), StrConv(m.Result("${moji}"), VbStrConv.Narrow))
-
-            ' 次の文字に移動
-            m = m.NextMatch()
-        End While
+        If Str_Count * 2 <> ByteCount Then
+            MsgBox("全角文字で入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+            Str.Text = String.Empty
+            Str.Focus()
+        End If
     End Sub
 
     ' 数字しか入力できないように制限する関数。
@@ -99,175 +83,175 @@ Public Class ChildInfoAdd
         cmb_BirthYear.Text = Format(Now, "yyyy")
     End Sub
 
-    Private Sub cmb_Author_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmb_Author.TextChanged
+    Private Sub cmb_Author_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmb_Author.LostFocus
         EmInput(cmb_Author)
     End Sub
 
-    Private Sub txt_ChildName_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_ChildName.TextChanged
+    Private Sub txt_ChildName_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_ChildName.LostFocus
         EmInput(txt_ChildName)
     End Sub
 
-    Private Sub txt_NickName_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_NickName.TextChanged
+    Private Sub txt_NickName_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_NickName.LostFocus
         EmInput(txt_NickName)
     End Sub
 
-    Private Sub txt_ChildNameKana_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_ChildNameKana.TextChanged
+    Private Sub txt_ChildNameKana_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_ChildNameKana.LostFocus
         EmInput(txt_ChildNameKana)
     End Sub
 
-    Private Sub txt_Address_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_Address.TextChanged
+    Private Sub txt_Address_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_Address.LostFocus
         EmInput(txt_Address)
     End Sub
 
-    Private Sub txt_DoctorName_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_DoctorName.TextChanged
+    Private Sub txt_DoctorName_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_DoctorName.LostFocus
         EmInput(txt_DoctorName)
     End Sub
 
-    Private Sub txt_FamilyName1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName1.TextChanged
+    Private Sub txt_FamilyName1_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName1.LostFocus
         EmInput(txt_FamilyName1)
     End Sub
 
-    Private Sub txt_RelationFamily1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily1.TextChanged
+    Private Sub txt_RelationFamily1_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily1.LostFocus
         EmInput(txt_RelationFamily1)
     End Sub
 
-    Private Sub txt_WorkPlace1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace1.TextChanged
+    Private Sub txt_WorkPlace1_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace1.LostFocus
         EmInput(txt_WorkPlace1)
     End Sub
 
-    Private Sub txt_FamilyName2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName2.TextChanged
+    Private Sub txt_FamilyName2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName2.LostFocus
         EmInput(txt_FamilyName2)
     End Sub
 
-    Private Sub txt_RelationFamily2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily2.TextChanged
+    Private Sub txt_RelationFamily2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily2.LostFocus
         EmInput(txt_RelationFamily2)
     End Sub
 
-    Private Sub txt_WorkPlace2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace2.TextChanged
+    Private Sub txt_WorkPlace2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace2.LostFocus
         EmInput(txt_WorkPlace2)
     End Sub
 
-    Private Sub txt_FamilyName3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName3.TextChanged
+    Private Sub txt_FamilyName3_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName3.LostFocus
         EmInput(txt_FamilyName3)
     End Sub
 
-    Private Sub txt_RelationFamily3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily3.TextChanged
+    Private Sub txt_RelationFamily3_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily3.LostFocus
         EmInput(txt_RelationFamily3)
     End Sub
 
-    Private Sub txt_WorkPlace3_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace3.TextChanged
+    Private Sub txt_WorkPlace3_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace3.LostFocus
         EmInput(txt_WorkPlace3)
     End Sub
 
-    Private Sub txt_FamilyName4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName4.TextChanged
+    Private Sub txt_FamilyName4_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName4.LostFocus
         EmInput(txt_FamilyName4)
     End Sub
 
-    Private Sub txt_RelationFamily4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily4.TextChanged
+    Private Sub txt_RelationFamily4_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily4.LostFocus
         EmInput(txt_RelationFamily4)
     End Sub
 
-    Private Sub txt_WorkPlace4_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace4.TextChanged
+    Private Sub txt_WorkPlace4_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace4.LostFocus
         EmInput(txt_WorkPlace4)
     End Sub
 
-    Private Sub txt_FamilyName5_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName5.TextChanged
+    Private Sub txt_FamilyName5_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName5.LostFocus
         EmInput(txt_FamilyName5)
     End Sub
 
-    Private Sub txt_RelationFamily5_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily5.TextChanged
+    Private Sub txt_RelationFamily5_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily5.LostFocus
         EmInput(txt_RelationFamily5)
     End Sub
 
-    Private Sub txt_WorkPlace5_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace5.TextChanged
+    Private Sub txt_WorkPlace5_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace5.LostFocus
         EmInput(txt_WorkPlace5)
     End Sub
 
-    Private Sub txt_FamilyName6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName6.TextChanged
+    Private Sub txt_FamilyName6_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName6.LostFocus
         EmInput(txt_FamilyName6)
     End Sub
 
-    Private Sub txt_RelationFamily6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily6.TextChanged
+    Private Sub txt_RelationFamily6_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily6.LostFocus
         EmInput(txt_RelationFamily6)
     End Sub
 
-    Private Sub txt_WorkPlace6_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace6.TextChanged
+    Private Sub txt_WorkPlace6_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace6.LostFocus
         EmInput(txt_WorkPlace6)
     End Sub
 
-    Private Sub txt_FamilyName7_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName7.TextChanged
+    Private Sub txt_FamilyName7_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName7.LostFocus
         EmInput(txt_FamilyName7)
     End Sub
 
-    Private Sub txt_RelationFamily7_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily7.TextChanged
+    Private Sub txt_RelationFamily7_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily7.LostFocus
         EmInput(txt_RelationFamily7)
     End Sub
 
-    Private Sub txt_WorkPlace7_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace7.TextChanged
+    Private Sub txt_WorkPlace7_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace7.LostFocus
         EmInput(txt_WorkPlace7)
     End Sub
 
-    Private Sub txt_FamilyName8_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName8.TextChanged
+    Private Sub txt_FamilyName8_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName8.LostFocus
         EmInput(txt_FamilyName8)
     End Sub
 
-    Private Sub txt_RelationFamily8_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily8.TextChanged
+    Private Sub txt_RelationFamily8_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily8.LostFocus
         EmInput(txt_RelationFamily8)
     End Sub
 
-    Private Sub txt_WorkPlace8_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace8.TextChanged
+    Private Sub txt_WorkPlace8_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace8.LostFocus
         EmInput(txt_WorkPlace8)
     End Sub
 
-    Private Sub txt_FamilyName9_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName9.TextChanged
+    Private Sub txt_FamilyName9_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_FamilyName9.LostFocus
         EmInput(txt_FamilyName9)
     End Sub
 
-    Private Sub txt_RelationFamily9_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily9.TextChanged
+    Private Sub txt_RelationFamily9_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationFamily9.LostFocus
         EmInput(txt_RelationFamily9)
     End Sub
 
-    Private Sub txt_WorkPlace9_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace9.TextChanged
+    Private Sub txt_WorkPlace9_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_WorkPlace9.LostFocus
         EmInput(txt_WorkPlace9)
     End Sub
 
-    Private Sub txt_EmergencyName1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_EmergencyName1.TextChanged
+    Private Sub txt_EmergencyName1_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_EmergencyName1.LostFocus
         EmInput(txt_EmergencyName1)
     End Sub
 
-    Private Sub txt_EmergencyName2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_EmergencyName2.TextChanged
+    Private Sub txt_EmergencyName2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_EmergencyName2.LostFocus
         EmInput(txt_EmergencyName2)
     End Sub
 
-    Private Sub txt_RelationEmergency1_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationEmergency1.TextChanged
+    Private Sub txt_RelationEmergency1_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationEmergency1.LostFocus
         EmInput(txt_RelationEmergency1)
     End Sub
 
-    Private Sub txt_RelationEmergency2_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationEmergency2.TextChanged
+    Private Sub txt_RelationEmergency2_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_RelationEmergency2.LostFocus
         EmInput(txt_RelationEmergency2)
     End Sub
 
-    Private Sub rtb_CommutingMethod_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rtb_CommutingMethod.TextChanged
+    Private Sub rtb_CommutingMethod_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles rtb_CommutingMethod.LostFocus
         EmInput(rtb_CommutingMethod)
     End Sub
 
-    Private Sub txt_AllergyDetails_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_AllergyDetails.TextChanged
+    Private Sub txt_AllergyDetails_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_AllergyDetails.LostFocus
         EmInput(txt_AllergyDetails)
     End Sub
 
-    Private Sub txt_IllnessEtc_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_IllnessEtc.TextChanged
+    Private Sub txt_IllnessEtc_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_IllnessEtc.LostFocus
         EmInput(txt_IllnessEtc)
     End Sub
 
-    Private Sub txt_Operation_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_Operation.TextChanged
+    Private Sub txt_Operation_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_Operation.LostFocus
         EmInput(txt_Operation)
     End Sub
 
-    Private Sub txt_SusceptibleIllness_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_SusceptibleIllness.TextChanged
+    Private Sub txt_SusceptibleIllness_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txt_SusceptibleIllness.LostFocus
         EmInput(txt_SusceptibleIllness)
     End Sub
 
-    Private Sub rtb_AnxietyAndAttention_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rtb_AnxietyAndAttention.TextChanged
+    Private Sub rtb_AnxietyAndAttention_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles rtb_AnxietyAndAttention.LostFocus
         EmInput(rtb_AnxietyAndAttention)
     End Sub
 
