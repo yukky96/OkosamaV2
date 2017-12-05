@@ -48,10 +48,6 @@ Public Class ChildInfoAdd
         If (year >= 1950 And year <= 2200) OrElse (cmb_BirthYear.Text <> String.Empty) Then
             If (month >= 1 And month <= 12) OrElse (cmb_BirthMonth.Text <> String.Empty) Then
                 Select Case month
-                    Case Is < 1, Is > 12
-                        MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
-                        cmb_BirthMonth.Text = String.Empty
-                        cmb_BirthMonth.Focus()
                     Case 1, 3, 5, 7, 8, 10, 12
                         DayAdd(30)
                     Case 4, 6, 9, 11
@@ -73,24 +69,28 @@ Public Class ChildInfoAdd
         End If
     End Sub
 
-    Private Sub DayAdd(ByRef day_count As Integer)
-        Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
+    Private Sub DayAdd(ByVal day_count As Integer)
         Dim day_array(day_count) As System.Object
 
         cmb_BirthDay.Items.Clear()
 
         Dim i As Integer
         For i = 0 To day_count
-            day_array(day_count) = day_count + 1
+            day_array(i) = i + 1
         Next i
 
         cmb_BirthDay.Items.AddRange(day_array)
 
-        If day < 1 Or day > day_count + 1 Then
-            MsgBox("1～" + day_count + 1 + "の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
-            cmb_BirthDay.Text = String.Empty
-            cmb_BirthDay.Focus()
+        If cmb_BirthDay.Text <> String.Empty Then
+            Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
+
+            If day < 1 Or day > day_count + 1 Then
+                MsgBox("1～" + day_count + 1 + "の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+                cmb_BirthDay.Text = String.Empty
+                cmb_BirthDay.Focus()
+            End If
         End If
+
     End Sub
 
     Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -269,26 +269,6 @@ Public Class ChildInfoAdd
 
     Private Sub rtb_AnxietyAndAttention_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles rtb_AnxietyAndAttention.TextChanged
         EmInput(rtb_AnxietyAndAttention)
-    End Sub
-
-    Private Sub txt_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_BirthMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_BirthDay_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_ChildAge_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
-        NumInput(e)
-    End Sub
-
-    Private Sub txt_ChildAgeMonth_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
-        NumInput(e)
     End Sub
 
     Private Sub cmb_BirthYear_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles cmb_BirthYear.KeyPress
