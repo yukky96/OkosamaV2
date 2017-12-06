@@ -26,31 +26,36 @@ Public Class ChildInfoAdd
 
     Private Sub DateDecision()
         'Parse関数でInteger型に変換して格納。
-        Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
-        Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
+        If cmb_BirthYear.Text <> String.Empty Or cmb_BirthMonth.Text <> String.Empty Then
+            Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
+            Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
 
-        If (year >= 1950 And year <= 2200) OrElse (cmb_BirthYear.Text <> String.Empty) Then
-            If (month >= 1 And month <= 12) OrElse (cmb_BirthMonth.Text <> String.Empty) Then
-                Select Case month
-                    Case 1, 3, 5, 7, 8, 10, 12
-                        DayAdd(30)
-                    Case 4, 6, 9, 11
-                        DayAdd(29)
-                    Case Is = 2, DateTime.IsLeapYear(year) = False
-                        DayAdd(27)
-                    Case Else
-                        DayAdd(28)
-                End Select
+            If (year >= 1950 And year <= 2200) Then
+                If (month >= 1 And month <= 12) Then
+                    Select Case month
+                        Case 1, 3, 5, 7, 8, 10, 12
+                            DayAdd(30)
+                        Case 4, 6, 9, 11
+                            DayAdd(29)
+                        Case Is = 2, DateTime.IsLeapYear(year) = False
+                            DayAdd(27)
+                        Case Else
+                            DayAdd(28)
+                    End Select
+                Else
+                    MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+                    cmb_BirthMonth.Text = String.Empty
+                    cmb_BirthMonth.Focus()
+                End If
             Else
-                MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
-                cmb_BirthMonth.Text = String.Empty
-                cmb_BirthMonth.Focus()
+                MsgBox("1950～2200の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+                cmb_BirthYear.Text = String.Empty
+                cmb_BirthYear.Focus()
             End If
-        Else
-            MsgBox("1950～2200の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
-            cmb_BirthYear.Text = String.Empty
-            cmb_BirthYear.Focus()
         End If
+
+
+
     End Sub
 
     Private Sub DayAdd(ByVal day_count As Integer)
@@ -79,8 +84,8 @@ Public Class ChildInfoAdd
     Private Sub GetAge(ByVal age As System.Windows.Forms.Label)
         Dim today As DateTime = DateTime.Today
 
-        ((today.Year * 10000 + today.Month * 100 + today.Day) - _
-            (birthDate.Year * 10000 + birthDate.Month * 100 + birthDate.Day)) / 10000
+        '((today.Year * 10000 + today.Month * 100 + today.Day) - _
+        '(birthDate.Year * 10000 + birthDate.Month * 100 + birthDate.Day)) / 10000
     End Sub
 
     Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -494,7 +499,7 @@ Public Class ChildInfoAdd
     End Sub
 
     Private Sub cmb_BirthYear_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthYear.TextChanged
-        If cmb_BirthYear.Text <> String.Empty Or cmb_BirthMonth.Text <> String.Empty Then
+        If cmb_BirthYear.Text <> String.Empty And cmb_BirthMonth.Text <> String.Empty Then
             cmb_BirthDay.Enabled = True
         Else
             cmb_BirthDay.Enabled = False
@@ -502,7 +507,7 @@ Public Class ChildInfoAdd
     End Sub
 
     Private Sub cmb_BirthMonth_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthMonth.TextChanged
-        If cmb_BirthYear.Text <> String.Empty Or cmb_BirthMonth.Text <> String.Empty Then
+        If cmb_BirthYear.Text <> String.Empty And cmb_BirthMonth.Text <> String.Empty Then
             cmb_BirthDay.Enabled = True
         Else
             cmb_BirthDay.Enabled = False
