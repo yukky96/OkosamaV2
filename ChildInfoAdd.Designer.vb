@@ -38,8 +38,8 @@ Partial Class ChildInfoAdd
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
+        Me.lbl_AgeMonth = New System.Windows.Forms.Label()
+        Me.lbl_Age = New System.Windows.Forms.Label()
         Me.cmb_BirthDay = New System.Windows.Forms.ComboBox()
         Me.cmb_BirthYear = New System.Windows.Forms.ComboBox()
         Me.cmb_BirthMonth = New System.Windows.Forms.ComboBox()
@@ -327,8 +327,8 @@ Partial Class ChildInfoAdd
         '
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel2.Controls.Add(Me.Label37)
-        Me.Panel2.Controls.Add(Me.Label36)
+        Me.Panel2.Controls.Add(Me.lbl_AgeMonth)
+        Me.Panel2.Controls.Add(Me.lbl_Age)
         Me.Panel2.Controls.Add(Me.cmb_BirthDay)
         Me.Panel2.Controls.Add(Me.cmb_BirthYear)
         Me.Panel2.Controls.Add(Me.cmb_BirthMonth)
@@ -364,23 +364,25 @@ Partial Class ChildInfoAdd
         Me.Panel2.Size = New System.Drawing.Size(778, 392)
         Me.Panel2.TabIndex = 0
         '
-        'Label37
+        'lbl_AgeMonth
         '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(462, 159)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(44, 12)
-        Me.Label37.TabIndex = 46
-        Me.Label37.Text = "Label37"
+        Me.lbl_AgeMonth.AutoSize = True
+        Me.lbl_AgeMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lbl_AgeMonth.Location = New System.Drawing.Point(480, 157)
+        Me.lbl_AgeMonth.Name = "lbl_AgeMonth"
+        Me.lbl_AgeMonth.Size = New System.Drawing.Size(16, 16)
+        Me.lbl_AgeMonth.TabIndex = 46
+        Me.lbl_AgeMonth.Text = "5"
         '
-        'Label36
+        'lbl_Age
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(395, 159)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(44, 12)
-        Me.Label36.TabIndex = 45
-        Me.Label36.Text = "Label36"
+        Me.lbl_Age.AutoSize = True
+        Me.lbl_Age.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lbl_Age.Location = New System.Drawing.Point(410, 157)
+        Me.lbl_Age.Name = "lbl_Age"
+        Me.lbl_Age.Size = New System.Drawing.Size(16, 16)
+        Me.lbl_Age.TabIndex = 45
+        Me.lbl_Age.Text = "5"
         '
         'cmb_BirthDay
         '
@@ -1743,7 +1745,7 @@ Partial Class ChildInfoAdd
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(785, 401)
+        Me.TabPage3.Size = New System.Drawing.Size(785, 474)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "健康面"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -2137,6 +2139,6 @@ Partial Class ChildInfoAdd
     Friend WithEvents cmb_BirthDay As System.Windows.Forms.ComboBox
     Friend WithEvents cmb_BirthMonth As System.Windows.Forms.ComboBox
     Friend WithEvents cmb_BirthYear As System.Windows.Forms.ComboBox
-    Friend WithEvents Label37 As System.Windows.Forms.Label
-    Friend WithEvents Label36 As System.Windows.Forms.Label
+    Friend WithEvents lbl_AgeMonth As System.Windows.Forms.Label
+    Friend WithEvents lbl_Age As System.Windows.Forms.Label
 End Class

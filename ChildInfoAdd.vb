@@ -74,7 +74,13 @@ Public Class ChildInfoAdd
                 cmb_BirthDay.Focus()
             End If
         End If
+    End Sub
 
+    Private Sub GetAge(ByVal age As System.Windows.Forms.Label)
+        Dim today As DateTime = DateTime.Today
+
+        ((today.Year * 10000 + today.Month * 100 + today.Day) - _
+            (birthDate.Year * 10000 + birthDate.Month * 100 + birthDate.Day)) / 10000
     End Sub
 
     Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -487,19 +493,6 @@ Public Class ChildInfoAdd
         DateDecision()
     End Sub
 
-    Private Sub cmb_BirthDay_LostFocus(sender As Object, e As EventArgs)
-        If IsNumeric(cmb_BirthDay.Text) Then
-            'Parse関数でInteger型に変換して格納。
-            Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
-
-            If day < 1 Or day > 31 Then
-                MsgBox("1～31の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, "")
-                cmb_BirthDay.Text = String.Empty
-                cmb_BirthDay.Focus()
-            End If
-        End If
-    End Sub
-
     Private Sub cmb_BirthYear_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthYear.TextChanged
         If cmb_BirthYear.Text <> String.Empty Or cmb_BirthMonth.Text <> String.Empty Then
             cmb_BirthDay.Enabled = True
@@ -514,5 +507,9 @@ Public Class ChildInfoAdd
         Else
             cmb_BirthDay.Enabled = False
         End If
+    End Sub
+
+    Private Sub cmb_BirthDay_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthDay.TextChanged
+
     End Sub
 End Class
