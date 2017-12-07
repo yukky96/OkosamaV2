@@ -11,7 +11,7 @@ Public Class ChildInfoAdd
         Dim ByteCount = Encode_JIS.GetByteCount(Str.Text)
 
         If Str_Count * 2 <> ByteCount Then
-            MsgBox("全角文字で入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+            MsgBox("全角文字で入力してください。", MsgBoxStyle.Critical, String.Empty)
             Str.Text = String.Empty
             Str.Focus()
         End If
@@ -45,12 +45,12 @@ Public Class ChildInfoAdd
                             End If
                     End Select
                 Else
-                    MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+                    MsgBox("1～12の数字を入力してください。", MsgBoxStyle.Critical, String.Empty)
                     cmb_BirthMonth.Text = String.Empty
                     cmb_BirthMonth.Focus()
                 End If
             Else
-                MsgBox("1950～2200の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+                MsgBox("1950～2200の数字を入力してください。", MsgBoxStyle.Critical, String.Empty)
                 cmb_BirthYear.Text = String.Empty
                 cmb_BirthYear.Focus()
             End If
@@ -76,18 +76,34 @@ Public Class ChildInfoAdd
             Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
 
             If day < 1 Or day > day_count + 1 Then
-                MsgBox("1～" + day_count + 1 + "の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
+                MsgBox("1～" + day_count + 1 + "の数字を入力してください。", MsgBoxStyle.Critical, String.Empty)
                 cmb_BirthDay.Text = String.Empty
                 cmb_BirthDay.Focus()
             End If
         End If
     End Sub
 
-    Private Sub GetAge(ByVal age As System.Windows.Forms.Label)
-        Dim today As DateTime = DateTime.Today
+    Private Sub GetAge()
+        If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" And cmb_BirthDay.Text <> "" Then
+            Dim today As DateTime = DateTime.Today
+            Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
+            Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
+            Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
 
-        '((today.Year * 10000 + today.Month * 100 + today.Day) - _
-        '(birthDate.Year * 10000 + birthDate.Month * 100 + birthDate.Day)) / 10000
+            Dim ageDouble As Double = ((today.Year * 10000 + today.Month * 100 + today.Day) - _
+                    (year * 10000 + month * 100 + day)) / 10000
+            MsgBox(ageDouble)
+            Dim age As Double = CType(Math.Truncate(ageDouble), Integer)
+            MsgBox(age)
+
+            Dim ageMonthDouble As Double = (ageDouble - CType(age, Double)) * 100
+            MsgBox(ageMonthDouble)
+            Dim ageMonth As Integer = CType(Math.Truncate(ageMonthDouble), Integer)
+            MsgBox(ageMonth)
+
+            lbl_Age.Text = age.ToString
+            lbl_AgeMonth.Text = ageMonth
+        End If
     End Sub
 
     Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -492,31 +508,25 @@ Public Class ChildInfoAdd
         NumInput(e)
     End Sub
 
-    Private Sub cmb_BirthYear_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthYear.LostFocus
+    Private Sub cmb_BirthYear_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthYear.LostFocus, cmb_BirthMonth.LostFocus
         DateDecision()
     End Sub
 
-    Private Sub cmb_BirthMonth_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthMonth.LostFocus
-        DateDecision()
-    End Sub
-
-    Private Sub cmb_BirthYear_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthYear.TextChanged
+    Private Sub cmb_BirthYear_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthYear.TextChanged, cmb_BirthMonth.TextChanged
         If cmb_BirthYear.Text <> String.Empty And cmb_BirthMonth.Text <> String.Empty Then
             cmb_BirthDay.Enabled = True
         Else
             cmb_BirthDay.Enabled = False
         End If
-    End Sub
 
-    Private Sub cmb_BirthMonth_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthMonth.TextChanged
-        If cmb_BirthYear.Text <> String.Empty And cmb_BirthMonth.Text <> String.Empty Then
-            cmb_BirthDay.Enabled = True
-        Else
-            cmb_BirthDay.Enabled = False
-        End If
+        lbl_Age.Text = String.Empty
+        lbl_AgeMonth.Text = String.Empty
+        GetAge()
     End Sub
 
     Private Sub cmb_BirthDay_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthDay.TextChanged
-
+        lbl_Age.Text = String.Empty
+        lbl_AgeMonth.Text = String.Empty
+        GetAge()
     End Sub
 End Class

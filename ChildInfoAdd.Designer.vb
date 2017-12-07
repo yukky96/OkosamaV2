@@ -370,9 +370,8 @@ Partial Class ChildInfoAdd
         Me.lbl_AgeMonth.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lbl_AgeMonth.Location = New System.Drawing.Point(480, 157)
         Me.lbl_AgeMonth.Name = "lbl_AgeMonth"
-        Me.lbl_AgeMonth.Size = New System.Drawing.Size(16, 16)
+        Me.lbl_AgeMonth.Size = New System.Drawing.Size(0, 16)
         Me.lbl_AgeMonth.TabIndex = 46
-        Me.lbl_AgeMonth.Text = "5"
         '
         'lbl_Age
         '
@@ -380,9 +379,8 @@ Partial Class ChildInfoAdd
         Me.lbl_Age.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lbl_Age.Location = New System.Drawing.Point(410, 157)
         Me.lbl_Age.Name = "lbl_Age"
-        Me.lbl_Age.Size = New System.Drawing.Size(16, 16)
+        Me.lbl_Age.Size = New System.Drawing.Size(0, 16)
         Me.lbl_Age.TabIndex = 45
-        Me.lbl_Age.Text = "5"
         '
         'cmb_BirthDay
         '
@@ -391,6 +389,7 @@ Partial Class ChildInfoAdd
         Me.cmb_BirthDay.FormattingEnabled = True
         Me.cmb_BirthDay.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.cmb_BirthDay.Location = New System.Drawing.Point(313, 154)
+        Me.cmb_BirthDay.MaxDropDownItems = 31
         Me.cmb_BirthDay.MaxLength = 2
         Me.cmb_BirthDay.Name = "cmb_BirthDay"
         Me.cmb_BirthDay.Size = New System.Drawing.Size(40, 24)
