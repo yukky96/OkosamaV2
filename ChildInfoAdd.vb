@@ -37,10 +37,12 @@ Public Class ChildInfoAdd
                             DayAdd(30)
                         Case 4, 6, 9, 11
                             DayAdd(29)
-                        Case Is = 2, DateTime.IsLeapYear(year) = False
-                            DayAdd(27)
                         Case Else
-                            DayAdd(28)
+                            If DateTime.IsLeapYear(year) = False Then
+                                DayAdd(27)
+                            Else
+                                DayAdd(28)
+                            End If
                     End Select
                 Else
                     MsgBox("1～12の数字を入力してください。", MsgBoxStyle.ApplicationModal Or MsgBoxStyle.Critical, String.Empty)
