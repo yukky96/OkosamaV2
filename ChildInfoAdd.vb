@@ -29,23 +29,50 @@ Public Class ChildInfoAdd
         If cmb_BirthYear.Text <> String.Empty Or cmb_BirthMonth.Text <> String.Empty Then
             Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
             Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
+            Dim nowYear As Integer = Integer.Parse(DateTime.Today.Year)
+            Dim nowMonth As Integer = Integer.Parse(DateTime.Today.Month)
 
             If (year >= 1950 And year <= 2200) Then
                 If (month >= 1 And month <= 12) Then
-                    Select Case month
-                        Case 1, 3, 5, 7, 8, 10, 12
-                            DayAdd(30)
-                        Case 4, 6, 9, 11
-                            DayAdd(29)
-                        Case Else
-                            If DateTime.IsLeapYear(year) = False Then
-                                DayAdd(27)
-                            Else
-                                DayAdd(28)
-                            End If
-                    End Select
+                    If (year < nowYear) Then
+                        Select Case month
+                            Case 1, 3, 5, 7, 8, 10, 12
+                                DayAdd(30)
+                            Case 4, 6, 9, 11
+                                DayAdd(29)
+                            Case Else
+                                If DateTime.IsLeapYear(year) = False Then
+                                    DayAdd(27)
+                                Else
+                                    DayAdd(28)
+                                End If
+                        End Select
+                    ElseIf (year = nowYear) Then
+                        If (month < nowMonth) Then
+                            Select Case month
+                                Case 1, 3, 5, 7, 8, 10, 12
+                                    DayAdd(30)
+                                Case 4, 6, 9, 11
+                                    DayAdd(29)
+                                Case Else
+                                    If DateTime.IsLeapYear(year) = False Then
+                                        DayAdd(27)
+                                    Else
+                                        DayAdd(28)
+                                    End If
+                            End Select
+                        Else
+                            MsgBox("今月までの数字を入力してください。", MsgBoxStyle.Critical, "")
+                            cmb_BirthMonth.Text = String.Empty
+                            cmb_BirthMonth.Focus()
+                        End If
+                    Else
+                        MsgBox("今年までの数字を入力してください。", MsgBoxStyle.Critical, String.Empty)
+                        cmb_BirthYear.Text = String.Empty
+                        cmb_BirthYear.Focus()
+                    End If
                 Else
-                    MsgBox("1～12の数字を入力してください。", MsgBoxStyle.Critical, String.Empty)
+                    MsgBox("1～12の数字を入力してください。", MsgBoxStyle.Critical, "")
                     cmb_BirthMonth.Text = String.Empty
                     cmb_BirthMonth.Focus()
                 End If
@@ -55,9 +82,6 @@ Public Class ChildInfoAdd
                 cmb_BirthYear.Focus()
             End If
         End If
-
-
-
     End Sub
 
     Private Sub DayAdd(ByVal day_count As Integer)
@@ -92,14 +116,10 @@ Public Class ChildInfoAdd
 
             Dim ageDouble As Double = ((today.Year * 10000 + today.Month * 100 + today.Day) - _
                     (year * 10000 + month * 100 + day)) / 10000
-            MsgBox(ageDouble)
             Dim age As Double = CType(Math.Truncate(ageDouble), Integer)
-            MsgBox(age)
 
             Dim ageMonthDouble As Double = (ageDouble - CType(age, Double)) * 100
-            MsgBox(ageMonthDouble)
             Dim ageMonth As Integer = CType(Math.Truncate(ageMonthDouble), Integer)
-            MsgBox(ageMonth)
 
             lbl_Age.Text = age.ToString
             lbl_AgeMonth.Text = ageMonth
@@ -107,8 +127,6 @@ Public Class ChildInfoAdd
     End Sub
 
     Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        encsjis = System.Text.Encoding.GetEncoding("Shift_JIS")
-
         cmb_BirthYear.Text = Format(Now, "yyyy")
     End Sub
 
