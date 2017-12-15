@@ -25,9 +25,6 @@ C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\bin\
 C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.exe
 C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.xml
 C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.pdb
-C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.Okosamav2.resources
-C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.Kazokukouseiv2.resources
-C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.KenkoumenV5.resources
 C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.Resources.resources
 C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.vbproj.GenerateResource.Cache
 C:\Users\15110025\Documents\Visual Studio 2013\Projects\OkosamaV2\OkosamaV2\obj\Debug\OkosamaV2.ChildInfoAdd.resources
