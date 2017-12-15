@@ -2,8 +2,8 @@
 
 Public Class ChildInfoAdd
 
-    Private yearSave As String
-    Private monthSave As String
+    Private yearSave As String = Today.Year.ToString
+    Private monthSave As String = Today.Month.ToString
 
     ' 全角文字しか入力できないように制限する関数。
     Private Sub EmInput(ByVal Str As Object)
@@ -30,16 +30,14 @@ Public Class ChildInfoAdd
         If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" Then
             Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
             Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
-            Dim nowYear As Integer = Integer.Parse(DateTime.Today.Year)
-            Dim nowMonth As Integer = Integer.Parse(DateTime.Today.Month)
 
-            If (year >= 1950 And year <= nowYear) Then
-                If (year < nowYear) Then
-                    MonthDecision(year, Month)
+            If (year >= 1950 And year <= Today.Year) Then
+                If (year < Today.Year) Then
+                    MonthDecision(year, month)
                     yearSave = year.ToString()
-                    monthSave = Month.ToString()
-                ElseIf (year = nowYear) Then
-                    If (month < nowMonth) Then
+                    monthSave = month.ToString()
+                ElseIf (year = Today.Year) Then
+                    If (month < Today.Month) Then
                         MonthDecision(year, month)
                         yearSave = year.ToString()
                         monthSave = month.ToString()
@@ -72,8 +70,22 @@ Public Class ChildInfoAdd
         End Select
     End Sub
 
-    Private Sub DayDecision()
-        If (cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" And cmb_BirthDay.Text <> "") Then
+    Private Sub DayAdd(ByVal day_count As Integer)
+        Dim day_array(day_count) As Object
+
+        cmb_BirthDay.Items.Clear()
+
+        Dim i As Integer
+        For i = 0 To day_count
+            day_array(i) = i + 1
+        Next i
+
+        cmb_BirthDay.Items.AddRange(day_array)
+    End Sub
+
+    Private Sub GetAge()
+        If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" And cmb_BirthDay.Text <> "" Then
+            Dim today As DateTime = DateTime.Today
             Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
             Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
             Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
@@ -81,6 +93,11 @@ Public Class ChildInfoAdd
 
             Try
                 Dim birthday As New Date(year, month, day)
+                Dim ageYear As Long = DateDiff("yyyy", birthday, today)
+                Dim ageMonth As Long = DateDiff("m", birthday, today) - (ageYear * 12)
+
+                lbl_Age.Text = ageYear.ToString
+                lbl_AgeMonth.Text = ageMonth.ToString
             Catch ex As System.ArgumentOutOfRangeException
                 MsgBox("選択した月にその日にちは存在していません。" + vbCrLf + "日にちを選択した月の末日に変更しますか？", MsgBoxStyle.Exclamation Or MsgBoxStyle.YesNo)
                 If (MsgBoxResult.Yes) Then
@@ -94,48 +111,102 @@ Public Class ChildInfoAdd
         End If
     End Sub
 
-    Private Sub DayAdd(ByVal day_count As Integer)
-        Dim day_array(day_count) As System.Object
-
-        cmb_BirthDay.Items.Clear()
-
+    Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim year_array(250) As Object
         Dim i As Integer
-        For i = 0 To day_count
-            day_array(i) = i + 1
+
+        cmb_BirthYear.Text = Today.Year.ToString
+
+        cmb_BirthYear.Items.Clear()
+
+        For i = 1950 To Today.Year
+            year_array(i - 1950) = i
         Next i
 
-        cmb_BirthDay.Items.AddRange(day_array)
+        cmb_BirthYear.Items.AddRange(year_array)
+    End Sub
 
-        If cmb_BirthDay.Text <> "" Then
-            Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
+    Private Sub cmb_BirthYear_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthYear.LostFocus
+        If cmb_BirthYear.Text <> "" Then
+            Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
 
-            If day < 1 Or day > day_count + 1 Then
-                MsgBox("1～" + day_count + 1 + "の数字を入力してください。", MsgBoxStyle.Critical, "")
-                cmb_BirthDay.Text = ""
-                cmb_BirthDay.Focus()
+            If (year >= 1950 And year <= Today.Year) Then
+                DateDecision()
+
+                If cmb_BirthDay.Text <> "" Then
+                    Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
+
+                    If day < 1 Or day > day_count + 1 Then
+                        MsgBox("1～" + day_count.ToString + "の数字を入力してください。", MsgBoxStyle.Critical, "")
+                        cmb_BirthDay.Text = ""
+                        cmb_BirthDay.Focus()
+                    End If
+                End If
+            Else
+                MsgBox("1950～" + Today.Year.ToString + "の数字を入力してください。", MsgBoxStyle.Critical, "")
+                cmb_BirthYear.Text = ""
+                cmb_BirthYear.Focus()
             End If
         End If
     End Sub
 
-    Private Sub GetAge()
-        If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" And cmb_BirthDay.Text <> "" Then
-            Dim today As DateTime = DateTime.Today
-            Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
+    Private Sub cmb_BirthMonth_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthMonth.LostFocus
+        If cmb_BirthYear.Text <> "" Then
             Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
-            Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
-            Dim birthday As New Date(year, month, day)
 
-            Dim ageYear As Long = DateDiff("yyyy", birthday, today)
-            Dim ageMonth As Long = DateDiff("m", birthday, today) - (ageYear * 12)
+            If (month >= 1 And month <= 12) Then
+                DateDecision()
 
-            lbl_Age.Text = ageYear.ToString
-            lbl_AgeMonth.Text = ageMonth.ToString
+                If cmb_BirthDay.Text <> "" Then
+                    Dim day As Integer = Integer.Parse(cmb_BirthDay.Text)
+
+                    If day < 1 Or day > day_count + 1 Then
+                        MsgBox("1～" + day_count.ToString + "の数字を入力してください。", MsgBoxStyle.Critical, "")
+                        cmb_BirthDay.Text = ""
+                        cmb_BirthDay.Focus()
+                    End If
+                End If
+            Else
+                MsgBox("1～12の数字を入力してください。", MsgBoxStyle.Critical, "")
+                cmb_BirthYear.Text = ""
+                cmb_BirthYear.Focus()
+            End If
         End If
     End Sub
 
-    Private Sub ChildInfoAdd_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        cmb_BirthYear.Text = Format(Now, "yyyy")
+    Private Sub cmb_BirthYear_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthYear.TextChanged
+        If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" Then
+            cmb_BirthDay.Enabled = True
+        Else
+            cmb_BirthDay.Enabled = False
+        End If
+
+        lbl_Age.Text = ""
+        lbl_AgeMonth.Text = ""
+
+        GetAge()
     End Sub
+
+    Private Sub cmb_BirthMonth_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthMonth.TextChanged
+        If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" Then
+            cmb_BirthDay.Enabled = True
+        Else
+            cmb_BirthDay.Enabled = False
+        End If
+
+        lbl_Age.Text = ""
+        lbl_AgeMonth.Text = ""
+
+        GetAge()
+    End Sub
+
+    Private Sub cmb_BirthDay_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthDay.TextChanged
+        lbl_Age.Text = ""
+        lbl_AgeMonth.Text = ""
+
+        GetAge()
+    End Sub
+
 
     Private Sub cmb_Author_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles cmb_Author.LostFocus
         EmInput(cmb_Author)
@@ -531,64 +602,6 @@ Public Class ChildInfoAdd
 
     Private Sub txt_CommutingMin_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txt_CommutingMin.KeyPress
         NumInput(e)
-    End Sub
-
-    Private Sub cmb_BirthYear_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthYear.LostFocus
-        If cmb_BirthYear.Text <> "" Then
-            Dim year As Integer = Integer.Parse(cmb_BirthYear.Text)
-
-            If (year >= 1950 And year <= Today.Year) Then
-                DateDecision()
-            Else
-                MsgBox("1950～" + Today.Year + "の数字を入力してください。", MsgBoxStyle.Critical, "")
-                cmb_BirthYear.Text = ""
-                cmb_BirthYear.Focus()
-            End If
-        End If
-    End Sub
-
-    Private Sub cmb_BirthMonth_LostFocus(sender As Object, e As EventArgs) Handles cmb_BirthMonth.LostFocus
-        If cmb_BirthYear.Text <> "" Then
-            Dim month As Integer = Integer.Parse(cmb_BirthMonth.Text)
-
-            If (month >= 1 And month <= 12) Then
-                DateDecision()
-            Else
-                MsgBox("1～12の数字を入力してください。", MsgBoxStyle.Critical, "")
-                cmb_BirthYear.Text = ""
-                cmb_BirthYear.Focus()
-            End If
-        End If
-    End Sub
-
-    Private Sub cmb_BirthYear_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthYear.TextChanged
-        If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" Then
-            cmb_BirthDay.Enabled = True
-        Else
-            cmb_BirthDay.Enabled = False
-        End If
-
-        lbl_Age.Text = ""
-        lbl_AgeMonth.Text = ""
-        GetAge()
-    End Sub
-
-    Private Sub cmb_BirthMonth_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthMonth.TextChanged
-        If cmb_BirthYear.Text <> "" And cmb_BirthMonth.Text <> "" Then
-            cmb_BirthDay.Enabled = True
-        Else
-            cmb_BirthDay.Enabled = False
-        End If
-
-        lbl_Age.Text = ""
-        lbl_AgeMonth.Text = ""
-        GetAge()
-    End Sub
-
-    Private Sub cmb_BirthDay_TextChanged(sender As Object, e As EventArgs) Handles cmb_BirthDay.TextChanged
-        lbl_Age.Text = ""
-        lbl_AgeMonth.Text = ""
-        GetAge()
     End Sub
 
 End Class
